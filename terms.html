@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | Greatclicks.io</title>
+  <meta name="description" content="Terms of Service for Greatclicks.io">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#EFF6FF', 100: '#DBEAFE', 200: '#BFDBFE', 300: '#93C5FD',
+              400: '#60A5FA', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8',
+              800: '#1E40AF', 900: '#1E3A8A'
+            },
+            dark: { 800: '#1E293B', 900: '#0F172A', 950: '#030712' }
+          },
+          fontFamily: {
+            heading: ['Syne', 'sans-serif'],
+            body: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-gray-900 font-body antialiased">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex-shrink-0">
+        <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 md:h-10">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">Home</a>
+        <a href="/pricing" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">Pricing</a>
+        <a href="/launchpad" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">The Launchpad</a>
+      </div>
+      <div class="hidden md:block">
+        <a href="/pricing" class="btn-primary group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40">
+          Get Pricing
+          <svg class="w-4 h-4 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-gray-900 p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-[60] bg-white flex-col items-center justify-center gap-8 hidden">
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-gray-900 p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <a href="/" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">Home</a>
+    <a href="/pricing" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">Pricing</a>
+    <a href="/launchpad" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">The Launchpad</a>
+    <a href="/pricing" class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-full font-semibold">
+      Get Pricing
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="pt-32 pb-12 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h1 class="font-heading font-bold text-4xl md:text-5xl text-gray-900 mb-4">Terms of Service</h1>
+      <p class="text-gray-500 text-base">Last updated: April 10, 2026</p>
+    </div>
+  </section>
+
+
+  <!-- ===== CONTENT ===== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Acceptance of Terms</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">By accessing or using the services provided by Greatclicks.io, you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services. These terms apply to all clients, subscribers, and users of the Greatclicks.io platform and services.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Description of Service</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">Greatclicks.io provides done-for-you GoHighLevel (GHL) automation services specifically designed for integrative and functional medicine practitioners. Our services include building custom workflows, automations, funnels, and integrations within your GHL sub-account. All work is performed inside the client's own GHL sub-account, meaning the client retains full ownership of all assets, workflows, and data created during the engagement.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Subscription Plans</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">Greatclicks.io offers two month-to-month subscription plans:</p>
+      <ul class="list-disc pl-6 text-gray-600 leading-relaxed mb-4 space-y-2">
+        <li><strong>Starter Plan -- $497/month:</strong> Includes 5 custom workflows or automations, 1 funnel per month, access to the Greatclicks request portal, GHL account support and maintenance, email and Loom walkthroughs for every deliverable, and full delivery within a 30-day build cycle.</li>
+        <li><strong>Growth Plan -- $797/month:</strong> Includes 8 custom workflows or automations, 2 funnels per month, access to the Greatclicks request portal, GHL account support and maintenance, priority async communication, EMR integration support, email and Loom walkthroughs for every deliverable, and full delivery within a 30-day build cycle.</li>
+      </ul>
+      <p class="text-gray-600 leading-relaxed mb-4">Both plans operate on a month-to-month basis with no long-term contracts. Unused deliverables in a given month do not roll over to the next month. You may upgrade or downgrade your plan at the start of any new build cycle.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">The Launchpad</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">The Launchpad is a one-time, fixed-scope build priced at $1,497. It is designed for practitioners who are new to GoHighLevel or starting from scratch and need a foundational setup before beginning a monthly subscription. The Launchpad is delivered within 10 to 14 business days and includes a defined scope of work agreed upon before the project begins.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Payment Terms</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">All payments are processed through Whop. Subscription fees are billed monthly on a recurring basis starting from the date of your initial subscription. The Launchpad fee is billed as a one-time payment at the time of purchase. You are responsible for ensuring that your payment method is valid and that sufficient funds are available. Failure to process payment may result in suspension of services.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Cancellation Policy</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">You may cancel your subscription at any time by providing 30 days written notice. Upon cancellation, you will continue to receive services through the end of your current 30-day build cycle. No refunds will be issued for partial months. The Launchpad, as a one-time fixed-scope engagement, is non-refundable once work has begun.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Intellectual Property</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">All work performed by Greatclicks.io is done inside the client's GHL sub-account. The client retains full ownership of all workflows, automations, funnels, and other assets created during the engagement. Greatclicks.io retains no ownership rights over the deliverables once they are completed and delivered within your account. Greatclicks.io reserves the right to use general knowledge, techniques, and methodologies developed during the engagement for future projects, provided no confidential client information is disclosed.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Client Responsibilities</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">To ensure successful delivery of services, the client agrees to:</p>
+      <ul class="list-disc pl-6 text-gray-600 leading-relaxed mb-4 space-y-2">
+        <li>Provide timely access to their GHL sub-account and any necessary third-party accounts or integrations.</li>
+        <li>Respond to requests for information, approvals, or feedback within a reasonable timeframe to avoid delays in the build cycle.</li>
+        <li>Ensure that all content, credentials, and materials provided to Greatclicks.io are accurate and lawfully obtained.</li>
+        <li>Maintain an active GHL subscription throughout the duration of the engagement.</li>
+      </ul>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Limitation of Liability</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">Greatclicks.io provides automation and integration services on an as-is basis. We do not guarantee specific business outcomes, revenue increases, or patient acquisition results. To the maximum extent permitted by law, Greatclicks.io shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising out of or related to the use of our services. Our total liability for any claim arising from these terms or our services shall not exceed the amount paid by the client in the three months preceding the claim.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Confidentiality</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">Both parties agree to maintain the confidentiality of any proprietary or sensitive information shared during the engagement. Greatclicks.io will not disclose, share, or sell any client data, account credentials, patient information, or business details to third parties. The client agrees not to disclose Greatclicks.io's proprietary processes, pricing arrangements, or internal methodologies to third parties.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Dispute Resolution</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">In the event of any dispute arising from these terms or the services provided, both parties agree to first attempt to resolve the matter through good-faith negotiation. If a resolution cannot be reached within 30 days, the dispute shall be submitted to binding arbitration in accordance with applicable rules. Each party shall bear its own costs in connection with the arbitration process.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Modifications to Terms</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">Greatclicks.io reserves the right to modify these Terms of Service at any time. Changes will be posted on this page with an updated "Last updated" date. Continued use of our services after any modifications constitutes your acceptance of the revised terms. We encourage you to review these terms periodically.</p>
+
+      <h2 class="font-heading font-bold text-2xl text-gray-900 mt-10 mb-4">Contact Us</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">If you have any questions about these Terms of Service, please contact us at <a href="mailto:support@greatclicks.io" class="text-primary-600 hover:text-primary-700 underline">support@greatclicks.io</a>.</p>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-white border-t border-gray-200 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">A done-for-you automation service built specifically for integrative and functional medicine practitioners using GoHighLevel.</p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-500 uppercase tracking-wider mb-4">Pages</h4>
+          <ul class="space-y-2">
+            <li><a href="/" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Home</a></li>
+            <li><a href="/pricing" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Pricing</a></li>
+            <li><a href="/launchpad" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">The Launchpad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-500 uppercase tracking-wider mb-4">Works with</h4>
+          <ul class="space-y-2">
+            <li><a href="https://www.biocanic.com/request-a-demo/?am_id=aaron4982" target="_blank" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Biocanic</a></li>
+            <li><span class="text-gray-400 text-sm">Cerbo</span></li>
+            <li><span class="text-gray-400 text-sm">Practice Better</span></li>
+            <li><span class="text-gray-400 text-sm">Optimantra</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-400 text-xs">&copy; 2026 Greatclicks.io. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="/privacy" class="text-gray-400 hover:text-gray-600 text-xs transition-colors">Privacy Policy</a>
+          <a href="/terms" class="text-gray-400 hover:text-gray-600 text-xs transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
