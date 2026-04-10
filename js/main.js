@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Set active nav link based on current page
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname;
   document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    if (href === path || (href === '/' && (path === '/' || path === '/index.html' || path === ''))) {
       link.classList.add('active');
     }
   });
