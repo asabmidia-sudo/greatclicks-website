@@ -115,17 +115,24 @@
         </p>
       </div>
 
-      <!-- Price callout -->
-      <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="inline-flex flex-col items-center bg-white border border-gray-200 shadow-lg rounded-2xl px-10 py-8">
-        <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">One-time investment</span>
-        <div class="flex items-baseline gap-1">
-          <span class="font-heading font-bold text-5xl md:text-6xl gradient-text">$1,497</span>
+      <!-- Price callout (Rotating border card) -->
+      <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="inline-block">
+        <div id="hero-price-card" class="glow-border-card rounded-2xl p-[3px] cursor-pointer" style="--rotation: 0deg;">
+          <div class="glow-border-inner rounded-[13px] bg-white px-10 py-8 flex flex-col items-center text-center relative overflow-hidden">
+            <!-- Subtle pattern overlay -->
+            <div class="absolute inset-0 pointer-events-none opacity-[0.06]" style="background: linear-gradient(45deg, #94a3b8 25%, transparent 25%, transparent 75%, #94a3b8 75%), linear-gradient(-45deg, #94a3b8 25%, transparent 25%, transparent 75%, #94a3b8 75%); background-size: 20px 20px;"></div>
+
+            <span class="relative text-gray-400 text-sm uppercase tracking-widest mb-2">One-time investment</span>
+            <div class="relative flex items-baseline gap-1">
+              <span class="font-heading font-bold text-5xl md:text-6xl gradient-text">$1,497</span>
+            </div>
+            <span class="relative text-gray-500 text-sm mt-2">Delivered in 10 to 14 days</span>
+            <a href="https://whop.com/checkout/plan_dvVvQISlzz4CJ" class="relative group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-full text-sm font-semibold hover:from-primary-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25 mt-6">
+              Get started
+              <svg class="w-4 h-4 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
         </div>
-        <span class="text-gray-500 text-sm mt-2">Delivered in 10 to 14 days</span>
-        <a href="https://whop.com/checkout/plan_dvVvQISlzz4CJ" class="group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-full text-sm font-semibold hover:from-primary-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25 mt-6">
-          Get started
-          <svg class="w-4 h-4 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
       </div>
     </div>
 
@@ -157,7 +164,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- 01 Website Form -->
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">01</span>
             <h3 class="font-heading font-semibold text-dark-950">Website Form</h3>
@@ -166,7 +173,7 @@
         </div>
 
         <!-- 02 Discovery Call Funnel -->
-        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">02</span>
             <h3 class="font-heading font-semibold text-dark-950">Discovery Call Funnel</h3>
@@ -175,7 +182,7 @@
         </div>
 
         <!-- 03 Appointment Automation -->
-        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">03</span>
             <h3 class="font-heading font-semibold text-dark-950">Appointment Automation</h3>
@@ -184,7 +191,7 @@
         </div>
 
         <!-- 04 No-Show Recovery -->
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">04</span>
             <h3 class="font-heading font-semibold text-dark-950">No-Show Recovery</h3>
@@ -193,7 +200,7 @@
         </div>
 
         <!-- 05 Pipeline Setup -->
-        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">05</span>
             <h3 class="font-heading font-semibold text-dark-950">Pipeline Setup</h3>
@@ -202,7 +209,7 @@
         </div>
 
         <!-- 06 Lead Magnet Funnel -->
-        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">06</span>
             <h3 class="font-heading font-semibold text-dark-950">Lead Magnet Funnel</h3>
@@ -211,7 +218,7 @@
         </div>
 
         <!-- 07 Contact Tagging -->
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">07</span>
             <h3 class="font-heading font-semibold text-dark-950">Contact Tagging</h3>
@@ -220,7 +227,7 @@
         </div>
 
         <!-- 08 14-Day Email Nurture -->
-        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">08</span>
             <h3 class="font-heading font-semibold text-dark-950">14-Day Email Nurture Sequence</h3>
@@ -229,7 +236,7 @@
         </div>
 
         <!-- 09 Email Newsletter Templates -->
-        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">09</span>
             <h3 class="font-heading font-semibold text-dark-950">Email Newsletter Templates</h3>
@@ -238,7 +245,7 @@
         </div>
 
         <!-- 10 Programs & Packages -->
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">10</span>
             <h3 class="font-heading font-semibold text-dark-950">Programs and Packages Setup</h3>
@@ -247,7 +254,7 @@
         </div>
 
         <!-- 11 Post-Purchase Automation -->
-        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">11</span>
             <h3 class="font-heading font-semibold text-dark-950">Post-Purchase Automation</h3>
@@ -256,7 +263,7 @@
         </div>
 
         <!-- 12 SMS Feature -->
-        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="tilt-card card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
           <div class="flex items-center gap-3 mb-4">
             <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">12</span>
             <h3 class="font-heading font-semibold text-dark-950">SMS Feature</h3>
@@ -290,53 +297,104 @@
         </div>
       </div>
 
-      <!-- Timeline -->
-      <div class="space-y-10">
-        <div data-aos="fade-up" data-aos-duration="900" class="flex gap-6">
-          <div class="flex-shrink-0">
-            <div class="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/30 flex items-center justify-center">
-              <span class="text-primary-600 font-heading font-bold text-sm">01</span>
+      <!-- Modern Timeline -->
+      <div class="timeline-wrapper relative">
+        <!-- Vertical track line -->
+        <div class="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gray-200" aria-hidden="true"></div>
+        <!-- Animated progress line -->
+        <div class="timeline-progress absolute left-6 md:left-8 top-0 w-px bg-primary-500 origin-top" aria-hidden="true"></div>
+
+        <div class="space-y-10 md:space-y-12 relative">
+
+          <!-- Step 01: Onboarding call -->
+          <div data-aos="fade-up" data-aos-duration="900" class="timeline-item group relative flex items-start gap-5 md:gap-7">
+            <div class="relative flex-shrink-0 z-10">
+              <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-2 border-emerald-200 shadow-md flex items-center justify-center">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="timeline-card bg-white/70 backdrop-blur-sm border border-emerald-100 rounded-xl p-5 md:p-6 transition-all duration-300 hover:shadow-md hover:border-primary-200 group-hover:-translate-y-0.5">
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="font-heading font-semibold text-lg md:text-xl text-gray-900 group-hover:text-primary-600 transition-colors duration-300">Onboarding call</h3>
+                    <span class="text-sm text-gray-400 font-medium">Step 1</span>
+                  </div>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 w-fit">Completed</span>
+                </div>
+                <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-4">We review your current state. If you need The Launchpad, we scope it and get it scheduled. If you already have a setup, you skip straight to the subscription.</p>
+                <div class="h-1 bg-gray-100 rounded-full overflow-hidden">
+                  <div class="timeline-bar h-full rounded-full bg-emerald-500" data-width="100%"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <h3 class="font-heading font-semibold text-xl mb-2 text-gray-900">Onboarding call</h3>
-            <p class="text-gray-500 leading-relaxed">We review your current state. If you need The Launchpad, we scope it and get it scheduled. If you already have a setup, you skip straight to the subscription.</p>
+
+          <!-- Step 02: The Launchpad build -->
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="timeline-item group relative flex items-start gap-5 md:gap-7">
+            <div class="relative flex-shrink-0 z-10">
+              <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-2 border-primary-200 shadow-md flex items-center justify-center">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="timeline-card bg-white/70 backdrop-blur-sm border border-primary-100 rounded-xl p-5 md:p-6 transition-all duration-300 hover:shadow-md hover:border-primary-200 group-hover:-translate-y-0.5">
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="font-heading font-semibold text-lg md:text-xl text-gray-900 group-hover:text-primary-600 transition-colors duration-300">The Launchpad build (10-14 days)</h3>
+                    <span class="text-sm text-gray-400 font-medium">Step 2</span>
+                  </div>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-50 text-primary-700 border border-primary-200 w-fit">In Progress</span>
+                </div>
+                <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-4">We build your complete conversion system: forms, funnels, pipeline, automations, email sequences, checkout pages, and onboarding workflows. All wired together inside your GHL account.</p>
+                <div class="h-1 bg-gray-100 rounded-full overflow-hidden">
+                  <div class="timeline-bar h-full rounded-full bg-primary-500" data-width="65%"></div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Step 03: Subscription begins -->
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="timeline-item group relative flex items-start gap-5 md:gap-7">
+            <div class="relative flex-shrink-0 z-10">
+              <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-2 border-amber-200 shadow-md flex items-center justify-center">
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke-width="2"/></svg>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="timeline-card bg-white/70 backdrop-blur-sm border border-amber-100 rounded-xl p-5 md:p-6 transition-all duration-300 hover:shadow-md hover:border-primary-200 group-hover:-translate-y-0.5">
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="font-heading font-semibold text-lg md:text-xl text-gray-900 group-hover:text-primary-600 transition-colors duration-300">Your subscription begins</h3>
+                    <span class="text-sm text-gray-400 font-medium">Step 3</span>
+                  </div>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200 w-fit">Upcoming</span>
+                </div>
+                <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-4">The moment The Launchpad is done, your Starter or Growth plan picks up exactly where it left off. Your first build cycle starts immediately with your system already live and working.</p>
+                <div class="h-1 bg-gray-100 rounded-full overflow-hidden">
+                  <div class="timeline-bar h-full rounded-full bg-amber-400" data-width="25%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="flex gap-6">
-          <div class="flex-shrink-0">
-            <div class="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/30 flex items-center justify-center">
-              <span class="text-primary-600 font-heading font-bold text-sm">02</span>
-            </div>
-          </div>
-          <div>
-            <h3 class="font-heading font-semibold text-xl mb-2 text-gray-900">The Launchpad build (10-14 days)</h3>
-            <p class="text-gray-500 leading-relaxed">We build your complete conversion system: forms, funnels, pipeline, automations, email sequences, checkout pages, and onboarding workflows. All wired together inside your GHL account.</p>
-          </div>
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="flex gap-6">
-          <div class="flex-shrink-0">
-            <div class="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/30 flex items-center justify-center">
-              <span class="text-primary-600 font-heading font-bold text-sm">03</span>
-            </div>
-          </div>
-          <div>
-            <h3 class="font-heading font-semibold text-xl mb-2 text-gray-900">Your subscription begins</h3>
-            <p class="text-gray-500 leading-relaxed">The moment The Launchpad is done, your Starter or Growth plan picks up exactly where it left off. Your first build cycle starts immediately with your system already live and working.</p>
-          </div>
-        </div>
+        <!-- End dot -->
+        <div class="absolute left-[19px] md:left-[27px] -bottom-4 w-3 h-3 bg-primary-500 rounded-full shadow-sm"></div>
       </div>
     </div>
   </section>
 
   <hr class="gradient-divider">
 
-  <!-- ===== PRICING BOX ===== -->
+  <!-- ===== PRICING BOX (Schema Wave background) ===== -->
   <section class="relative py-24 md:py-36 bg-white overflow-hidden">
-    <div class="relative max-w-3xl mx-auto px-6 text-center">
-      <div data-aos="zoom-in" data-aos-duration="900" class="pricing-glow bg-gray-50 border-2 border-primary-500/30 rounded-2xl p-10 md:p-14">
+    <!-- Animated wave canvas -->
+    <canvas id="schema-wave-canvas" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <div data-aos="zoom-in" data-aos-duration="900" class="pricing-glow bg-white/80 backdrop-blur-sm border-2 border-primary-500/30 rounded-2xl p-10 md:p-14">
         <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">One-time build</span>
         <h2 class="font-heading font-bold text-4xl md:text-5xl mt-4 mb-2 leading-[1.12] tracking-[-0.02em] text-gray-900">The Launchpad</h2>
         <div class="flex items-baseline justify-center gap-2 mb-4">
@@ -417,6 +475,10 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/glow-border.js"></script>
+  <script src="js/tilt-cards.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/schema-waves.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/faq.js"></script>
   <script src="js/cookie-consent.js"></script>

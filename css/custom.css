@@ -401,6 +401,83 @@ html {
   pointer-events: none;
 }
 
+/* ===== GLOW BORDER CARD (Rotating conic gradient) ===== */
+.glow-border-card {
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    conic-gradient(from var(--rotation, 0deg), #2563EB 0deg, #3B82F6 90deg, #e5e7eb 90deg, #e5e7eb 360deg) border-box;
+  border: 3px solid transparent;
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-border-card:hover {
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== MODERN TIMELINE ===== */
+.timeline-progress {
+  transform: scaleY(0);
+  transition: transform 1.2s ease-out;
+}
+
+.timeline-progress.animate {
+  transform: scaleY(1);
+}
+
+.timeline-bar {
+  width: 0;
+  transition: width 1.2s ease-out;
+}
+
+.timeline-bar.animate {
+  /* width set via JS from data-width */
+}
+
+/* ===== TILT CARDS (3D hover + glow) ===== */
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.3s ease;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1), 0 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Grid line texture overlay */
+.tilt-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(to right, rgba(128, 128, 128, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glow overlay that follows cursor */
+.tilt-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+/* Inner content stays above overlays */
+.tilt-card > *:not(.tilt-glow) {
+  position: relative;
+  z-index: 3;
+}
+
 /* ===== CYBERCORE BACKGROUND (Light Theme) ===== */
 .cybercore-scene {
   position: absolute;
