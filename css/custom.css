@@ -71,36 +71,53 @@ html {
   align-self: center;
 }
 
-/* ===== NAV ===== */
-.nav-scrolled {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+/* ===== NAV (Arooth-style floating pill) ===== */
+.nav-pill {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 9999px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Nav link underline animation */
+.nav-scrolled .nav-pill {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Nav link pill style */
 .nav-link {
   position: relative;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #2563EB, #3B82F6);
-  transform: scaleX(0);
-  transform-origin: left;
+.nav-link:hover {
+  background: rgba(37, 99, 235, 0.06);
+  color: #2563EB;
+}
+
+.nav-link.active {
+  background: #2563EB;
+  color: #ffffff !important;
+}
+
+/* CTA arrow circle */
+.nav-cta-arrow {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-  transform: scaleX(1);
+.group:hover .nav-cta-arrow {
+  transform: translateX(3px);
 }
 
 /* ===== BUTTON STYLES ===== */
@@ -169,23 +186,15 @@ html {
   50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.2); }
 }
 
-/* ===== FAQ ACCORDION ===== */
+/* ===== FAQ ACCORDION (Project-card style) ===== */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.45s cubic-bezier(0.04, 0.62, 0.23, 0.98);
 }
 
 .faq-answer.open {
   max-height: 500px;
-}
-
-.faq-icon {
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.faq-item.open .faq-icon {
-  transform: rotate(45deg);
 }
 
 .faq-item {
@@ -193,7 +202,55 @@ html {
 }
 
 .faq-item:hover {
-  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Chevron button */
+.faq-chevron-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  background: #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-chevron-btn:hover {
+  background: #D1D5DB;
+  transform: scale(1.08);
+}
+
+.faq-chevron-btn svg {
+  transition: transform 0.4s cubic-bezier(0.04, 0.62, 0.23, 0.98);
+}
+
+.faq-item.open .faq-chevron-btn svg {
+  transform: rotate(180deg);
+}
+
+/* FAQ number badge */
+.faq-badge {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item:hover .faq-badge {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.faq-item.open .faq-badge {
+  transform: scale(1.05);
 }
 
 /* ===== GRADIENT TEXT ===== */
@@ -275,6 +332,204 @@ html {
   display: block;
   width: calc(100% + 1.3px);
   height: 60px;
+}
+
+/* ===== NEUMORPHIC CARDS ===== */
+.neu-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.07),
+    -8px -8px 20px rgba(255, 255, 255, 0.85);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neu-card:hover {
+  box-shadow:
+    14px 14px 28px rgba(0, 0, 0, 0.1),
+    -14px -14px 28px rgba(255, 255, 255, 1);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Blue border reveal on hover */
+.neu-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.neu-card:hover::after {
+  opacity: 1;
+}
+
+/* Inset neumorphic icon container */
+.neu-icon {
+  box-shadow:
+    inset 3px 3px 6px rgba(0, 0, 0, 0.05),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+  transition: all 0.4s ease;
+}
+
+.neu-card:hover .neu-icon {
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+/* Animated scrolling grid background */
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+.animated-grid-bg {
+  position: absolute;
+  inset: -40px;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+  pointer-events: none;
+}
+
+/* ===== CYBERCORE BACKGROUND (Light Theme) ===== */
+.cybercore-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Floor grid with perspective */
+.cybercore-floor {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  width: 120%;
+  height: 55%;
+  background:
+    linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+  background-size: 60px 40px;
+  transform: perspective(500px) rotateX(55deg);
+  transform-origin: center bottom;
+  animation: cyberMoveGrid 12s linear infinite, cyberFloorGlow 6s ease-in-out infinite;
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 85%);
+}
+
+/* Central glow column */
+.cybercore-column {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 200px;
+  height: 100%;
+  transform: translateX(-50%);
+  background: linear-gradient(to top,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(96, 165, 250, 0.08) 40%,
+    transparent 70%);
+  filter: blur(30px);
+  animation: cyberMainGlow 4s ease-in-out infinite alternate;
+}
+
+/* Beam container */
+.cybercore-beams {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Individual light beams */
+.cybercore-beam {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  border-radius: 2px;
+  animation-name: cyberRise, cyberFade;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.cybercore-beam.primary {
+  background: linear-gradient(to top,
+    rgba(59, 130, 246, 0.45),
+    rgba(96, 165, 250, 0.15),
+    transparent);
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.2);
+}
+
+.cybercore-beam.secondary {
+  background: linear-gradient(to top,
+    rgba(96, 165, 250, 0.55),
+    rgba(147, 197, 253, 0.2),
+    transparent);
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+@keyframes cyberRise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+}
+
+@keyframes cyberFade {
+  0%, 100% {
+    opacity: 0;
+  }
+  5%, 85% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes cyberFloorGlow {
+  0%, 100% {
+    transform: perspective(500px) rotateX(55deg) scale(0.98);
+    opacity: 0.7;
+  }
+  50% {
+    transform: perspective(500px) rotateX(55deg) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes cyberMainGlow {
+  from {
+    opacity: 0.5;
+    filter: blur(40px);
+  }
+  to {
+    opacity: 0.7;
+    filter: blur(30px);
+  }
+}
+
+@keyframes cyberMoveGrid {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -40px;
+  }
 }
 
 /* ===== RESPONSIVE ===== */
