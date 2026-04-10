@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greatclicks.io | Done-For-You GHL Automations for Functional and Integrative Medicine</title>
+  <meta name="description" content="A done-for-you automation service designed specifically for functional and integrative health practitioners using GoHighLevel and modern tools to streamline operations and reclaim your time.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#EFF6FF', 100: '#DBEAFE', 200: '#BFDBFE', 300: '#93C5FD',
+              400: '#60A5FA', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8',
+              800: '#1E40AF', 900: '#1E3A8A'
+            },
+            dark: { 800: '#1E293B', 900: '#0F172A', 950: '#030712' }
+          },
+          fontFamily: {
+            heading: ['Syne', 'sans-serif'],
+            body: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-gray-900 font-body antialiased">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex-shrink-0">
+        <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 md:h-10">
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide active">Home</a>
+        <a href="pricing.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">Pricing</a>
+        <a href="launchpad.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">The Launchpad</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:block">
+        <a href="#cta" class="btn-primary group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-primary-700 hover:to-primary-600 shadow-lg shadow-primary-500/25">
+          Get Pricing
+          <svg class="w-4 h-4 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden text-gray-900 p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-[60] bg-white flex-col items-center justify-center gap-8 hidden">
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-gray-900 p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <a href="index.html" class="text-2xl font-heading font-semibold text-gray-900">Home</a>
+    <a href="pricing.html" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">Pricing</a>
+    <a href="launchpad.html" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">The Launchpad</a>
+    <a href="#cta" class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-full font-semibold">
+      Get Pricing
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+
+
+  <!-- ===== SECTION 01: HERO ===== -->
+  <section class="relative flex items-center overflow-hidden bg-gray-50">
+    <!-- Canvas particle background -->
+    <canvas id="hero-particles" class="particle-canvas canvas-bg"></canvas>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-10 md:pt-36 md:pb-16 text-center">
+      <!-- Eyebrow -->
+      <div data-aos="fade-down" data-aos-duration="700" class="eyebrow-pill inline-flex items-center gap-2 bg-primary-500/8 border border-primary-500/15 rounded-full px-5 py-2 mb-10">
+        <span class="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
+        <span class="text-primary-600 text-sm font-medium tracking-wide">Done-For-You GHL Automations for Functional and Integrative Medicine</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" class="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] tracking-[-0.02em] max-w-5xl mx-auto mb-8 text-gray-900">
+        We Handle the Tech.<span class="gradient-text"> You Focus on Clients.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
+        Done-for-you automation for functional and integrative health practitioners, built on GoHighLevel to streamline your practice and reclaim your time.
+      </p>
+
+      <!-- CTAs -->
+      <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="900" class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+        <a href="#cta" class="btn-primary group inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-4 rounded-full text-base font-semibold shadow-lg shadow-primary-500/25">
+          Get Pricing
+          <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="launchpad.html" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto border border-gray-300 hover:border-primary-500 text-gray-600 hover:text-primary-600 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300">
+          New to GHL? Start with The Launchpad
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR - CLIENT LOGOS ===== -->
+  <section class="bg-white py-10 md:py-14 border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <p data-aos="fade-up" class="text-gray-400 text-xs uppercase tracking-[0.2em] mb-8 font-medium text-center">Trusted by practitioners like</p>
+      <div data-aos="fade-up" data-aos-delay="100" class="flex flex-wrap items-center justify-center gap-6 md:gap-12 md:flex-nowrap">
+        <img src="images/true-wellness.webp" alt="True Wellness Center" class="client-logo h-8 md:h-11 flex-shrink-0 object-contain">
+        <img src="images/reveal-vitality.png" alt="Reveal Vitality Institute" class="client-logo h-8 md:h-11 flex-shrink-0 object-contain">
+        <img src="images/inception-telehealth.webp" alt="Inception Telehealth & Wellness" class="client-logo h-8 md:h-11 flex-shrink-0 object-contain">
+        <img src="images/noble-functional.png" alt="Noble Functional Medicine" class="client-logo h-8 md:h-11 flex-shrink-0 object-contain">
+        <img src="images/vessel.png" alt="Vessel" class="client-logo client-logo--invert h-12 md:h-16 flex-shrink-0 object-contain">
+        <img src="images/ksn-logo.webp" alt="KSN" class="client-logo client-logo--invert h-8 md:h-11 flex-shrink-0 object-contain">
+        <img src="images/forever-young.png" alt="Forever Young Mens Health" class="client-logo h-12 md:h-16 flex-shrink-0 object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 02: PAIN POINTS ===== -->
+  <section class="relative py-24 md:py-36 bg-white overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="relative max-w-7xl mx-auto px-6">
+      <!-- Section header -->
+      <div class="relative mb-20">
+        <span class="section-number font-heading">01</span>
+        <div data-aos="fade-up" data-aos-duration="900">
+          <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">The problem</span>
+          <h2 class="font-heading font-bold text-3xl md:text-5xl mt-4 max-w-3xl leading-[1.12] tracking-[-0.02em] text-gray-900">
+            Running a functional medicine practice should not feel like this.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Pain point cards -->
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+        <!-- Pain 1 -->
+        <div data-aos="fade-up" data-aos-delay="0" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-8 lg:p-10">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Patchwork follow-up systems</h3>
+          <p class="text-gray-500 leading-relaxed">You built a great practice. But your follow-up system is a patchwork of sticky notes, missed calls, and emails you keep meaning to send.</p>
+        </div>
+
+        <!-- Pain 2 -->
+        <div data-aos="fade-up" data-aos-delay="100" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-8 lg:p-10">
+          <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">GHL sits underused</h3>
+          <p class="text-gray-500 leading-relaxed">You know GHL can do more. You have the tool. But you do not have the time to learn it, build in it, or keep it moving every month.</p>
+        </div>
+
+        <!-- Pain 3 -->
+        <div data-aos="fade-up" data-aos-delay="200" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-8 lg:p-10">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">VAs are not GHL specialists</h3>
+          <p class="text-gray-500 leading-relaxed">You hired a VA. It helped a little. But they are not a GHL specialist, and you are still the one figuring out what to build and how to explain it to them.</p>
+        </div>
+
+        <!-- Pain 4 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-8 lg:p-10">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Agencies quote $10K+ builds</h3>
+          <p class="text-gray-500 leading-relaxed">You looked at agencies. They quoted you $10K+ for a big custom build you are not even sure you need yet. You just want consistent progress, every single month.</p>
+        </div>
+      </div>
+
+      <!-- Transition line -->
+      <div data-aos="fade-up" data-aos-duration="1000" class="max-w-3xl mx-auto">
+        <p class="text-gray-600 text-lg md:text-xl leading-relaxed italic border-l-2 border-primary-500 pl-6">
+          You do not need a massive one-time build. You need compounding automation progress, from people who actually understand how functional medicine practices run.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gradient divider -->
+  <hr class="gradient-divider">
+
+
+  <!-- ===== SECTION 03: TESTIMONIAL VIDEOS ===== -->
+  <section class="relative py-24 md:py-36 bg-gray-50 overflow-hidden">
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div data-aos="fade-up" data-aos-duration="900" class="text-center mb-14">
+        <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">Success Stories</span>
+        <h2 class="font-heading font-bold text-3xl md:text-5xl mt-4 mb-5 text-gray-900 leading-[1.12] tracking-[-0.02em]">
+          Hear from our successful practitioners
+        </h2>
+      </div>
+
+      <!-- Video grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="8iKJvXJ7EUE">
+          <img src="https://img.youtube.com/vi/8iKJvXJ7EUE/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="hyVvRVefIHY">
+          <img src="https://img.youtube.com/vi/hyVvRVefIHY/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="O2rQ2PPHHCA">
+          <img src="https://img.youtube.com/vi/O2rQ2PPHHCA/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="37U9I4kTpEs">
+          <img src="https://img.youtube.com/vi/37U9I4kTpEs/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="SOjWkJuQCr4">
+          <img src="https://img.youtube.com/vi/SOjWkJuQCr4/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="sloJaDNDsZ4">
+          <img src="https://img.youtube.com/vi/sloJaDNDsZ4/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="lI8J-yhjzpc">
+          <img src="https://img.youtube.com/vi/lI8J-yhjzpc/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="WqYqI-Bdayo">
+          <img src="https://img.youtube.com/vi/WqYqI-Bdayo/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="yt-thumb group relative aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" data-vid="bNs20i-EQKI">
+          <img src="https://img.youtube.com/vi/bNs20i-EQKI/hqdefault.jpg" alt="Testimonial" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"><svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gradient divider -->
+  <hr class="gradient-divider">
+
+
+  <!-- ===== SECTION 04: SOLUTION ===== -->
+  <section class="relative py-24 md:py-36 bg-white overflow-hidden">
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="relative mb-20">
+        <span class="section-number font-heading">02</span>
+        <div data-aos="fade-up" data-aos-duration="900">
+          <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">What we do</span>
+          <h2 class="font-heading font-bold text-3xl md:text-5xl mt-4 text-gray-900 max-w-3xl leading-[1.12] tracking-[-0.02em]">
+            A monthly automation team for your GHL account. Without the overhead.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Body text -->
+      <div data-aos="fade-up" data-aos-delay="100" class="max-w-3xl mb-20">
+        <p class="text-gray-500 text-lg leading-[1.8] mb-5">
+          Greatclicks.io is a done-for-you automation service built specifically for integrative and functional medicine practitioners. We work inside your GoHighLevel account every single month, building the workflows, sequences, and funnels that move your practice forward.
+        </p>
+        <p class="text-gray-500 text-lg leading-[1.8]">
+          This is not a course. Not a template library. Not a one-time setup. It is an ongoing build service that treats your GHL account like a living system, one that gets smarter and more efficient every month.
+        </p>
+      </div>
+
+      <!-- 3 Pillars -->
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Pillar 1 -->
+        <div data-aos="fade-up" data-aos-delay="0" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-8 lg:p-10">
+          <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Custom, not cookie-cutter</h3>
+          <p class="text-gray-500 leading-relaxed">Every workflow is built from scratch for your practice. We map your patient journey, understand how your team operates, and build automations that fit, not ones you have to bend your process around.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div data-aos="fade-up" data-aos-delay="150" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-8 lg:p-10">
+          <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Specialist knowledge</h3>
+          <p class="text-gray-500 leading-relaxed">We have hands-on experience with Biocanic, Cerbo, Practice Better, Optimantra, and Jane App inside GHL. We understand functional medicine workflows and build accordingly.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-8 lg:p-10">
+          <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.281m5.94 2.28l-2.28 5.941"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Predictable, compounding progress</h3>
+          <p class="text-gray-500 leading-relaxed">Every month your system gets better. More touchpoints automated. More leads nurtured. More time saved. It compounds because we never stop building.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gradient divider -->
+  <hr class="gradient-divider">
+
+
+  <!-- ===== SECTION 07: HOW IT WORKS ===== -->
+  <section class="relative py-24 md:py-36 bg-gray-50 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-30"></div>
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="relative mb-20">
+        <span class="section-number font-heading">03</span>
+        <div data-aos="fade-up" data-aos-duration="900">
+          <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">The process</span>
+          <h2 class="font-heading font-bold text-3xl md:text-5xl mt-4 max-w-2xl leading-[1.12] tracking-[-0.02em] text-gray-900">
+            Simple. Predictable. No managing us required.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <!-- Step 01 -->
+        <div data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" class="relative">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center">
+                <span class="text-primary-600 font-heading font-bold text-sm">01</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Onboarding call</h3>
+              <p class="text-gray-500 leading-relaxed mb-2">We get on a call, review your current GHL setup, and figure out the right starting point. If you need The Launchpad, we scope it here and get it scheduled. If you are ready to go straight into the subscription, we build your first month's queue on this call and start immediately.</p>
+              <span class="text-primary-600 text-sm font-medium">Time required from you: 60 minutes.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 02 -->
+        <div data-aos="fade-left" data-aos-delay="150" data-aos-duration="800" class="relative">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center">
+                <span class="text-primary-600 font-heading font-bold text-sm">02</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">We build (Days 1 to 28)</h3>
+              <p class="text-gray-500 leading-relaxed mb-2">Our team works inside your GHL account throughout the month. You submit requests through the portal, we build them out, and you receive an Email or Loom walkthrough as each deliverable is completed. No chasing. No check-ins required.</p>
+              <span class="text-primary-600 text-sm font-medium">Time required from you: Zero.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 03 -->
+        <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" class="relative">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center">
+                <span class="text-primary-600 font-heading font-bold text-sm">03</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Review and handoff (Days 28 to 30)</h3>
+              <p class="text-gray-500 leading-relaxed mb-2">We confirm everything is live and working, walk you through each deliverable, and lock in your priorities for the next cycle.</p>
+              <span class="text-primary-600 text-sm font-medium">Time required from you: 30 minutes.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 04 -->
+        <div data-aos="fade-left" data-aos-delay="450" data-aos-duration="800" class="relative">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-14 h-14 rounded-full bg-primary-500/10 border border-primary-500/20 flex items-center justify-center">
+                <span class="text-primary-600 font-heading font-bold text-sm">04</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-xl mb-3 text-gray-900">Repeat</h3>
+              <p class="text-gray-500 leading-relaxed">Your subscription renews. Your queue resets. Every month, your automation system gets more complete, more connected, and more effective.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gradient divider -->
+  <hr class="gradient-divider">
+
+
+  <!-- ===== SECTION 08: FAQ ===== -->
+  <section class="relative py-24 md:py-36 bg-white overflow-hidden">
+    <div class="relative max-w-3xl mx-auto px-6">
+      <div class="relative mb-16">
+        <span class="section-number font-heading">04</span>
+        <div data-aos="fade-up" data-aos-duration="900" class="text-center">
+          <span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">FAQ</span>
+          <h2 class="font-heading font-bold text-3xl md:text-5xl mt-4 text-gray-900 leading-[1.12] tracking-[-0.02em]">
+            Questions we get asked before the first call.
+          </h2>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" class="space-y-3">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">What is The Launchpad and do I need it?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">The Launchpad is a one-time, fixed-scope build that sets up your complete client conversion system inside GHL before your subscription starts. If you are new to GHL or have nothing built yet, you need it. If you already have a working setup, you likely go straight into the subscription. We confirm this on your onboarding call.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">What counts as one workflow or automation?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">One complete, functional workflow is one deliverable. A 3-step appointment reminder sequence is one workflow. A 5-email nurture sequence is one workflow. A VSL funnel with connected automation is one funnel deliverable. We confirm scope with you at the start of each build cycle so there are no surprises.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">Is there a contract?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">No. Both plans are month-to-month. You can cancel anytime with 30 days notice. No penalties, no lock-in.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">Do unused deliverables roll over?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">No. Each month's deliverables are scoped for that cycle. In practice, the build queue rarely has unused capacity because we plan ahead together on your onboarding call.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">What EMR systems do you work with?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">We have hands-on integration experience with Biocanic, Cerbo, Practice Better, Optimantra, and Jane App inside GHL. EMR integration support is included in the Growth plan.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">How do I submit build requests?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">Both plans include access to the Greatclicks request portal. You submit your requests there, we pick them up in your active build cycle, and you get an Email or Loom walkthrough when each one is done.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">Can I switch plans?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">Yes. You can upgrade or downgrade at the start of any new build cycle.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">What happens if I need something outside the plan scope?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">We flag it before touching anything. Out-of-scope work is quoted separately and only starts once you approve.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">Do you build inside my existing GHL account?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">Yes. You keep full ownership and access at all times. We work inside your sub-account and hand everything off through your portal and walkthrough videos.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">I already have parts of my GHL set up. Can I skip The Launchpad?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">Possibly. If you already have a working pipeline, core automations, and at least one funnel live, you can go straight into the subscription. We review your setup on the onboarding call and tell you exactly what makes sense.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Gradient divider -->
+  <hr class="gradient-divider">
+
+  <!-- ===== SECTION 09: FINAL CTA ===== -->
+  <section id="cta" class="relative py-24 md:py-36 bg-gray-50 overflow-hidden">
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" data-aos-duration="1000" class="font-heading font-bold text-3xl md:text-5xl mb-8 leading-[1.12] tracking-[-0.02em] text-gray-900">
+        Your practice is ready for automations that actually run.
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="text-gray-500 text-lg leading-[1.8] mb-5">
+        If you are tired of doing things manually, tired of watching leads fall through the cracks, and tired of knowing GHL can do more but not having the time or team to build it, this is the service for you.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="900" class="text-gray-500 text-lg leading-[1.8] mb-12">
+        Get Pricing. We will review your setup, confirm which plan fits, and either get The Launchpad scheduled or kick off your first build cycle on the spot. No pitch. No pressure. Just a straight conversation about what your practice needs and how we can build it.
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <a href="#" class="btn-primary group inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-4 rounded-full text-base font-semibold shadow-lg shadow-primary-500/25">
+          Get Pricing
+          <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="pricing.html" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto border border-gray-300 hover:border-primary-500 text-gray-600 hover:text-primary-600 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300">
+          Not sure where to start? See pricing
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <p data-aos="fade-up" data-aos-delay="300" class="text-gray-400 text-sm tracking-wide">
+        Built for functional medicine. Powered by GoHighLevel.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-white border-t border-gray-200 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+            A done-for-you automation service built specifically for integrative and functional medicine practitioners using GoHighLevel.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-900 uppercase tracking-wider mb-4">Pages</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Home</a></li>
+            <li><a href="pricing.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Pricing</a></li>
+            <li><a href="launchpad.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">The Launchpad</a></li>
+          </ul>
+        </div>
+
+        <!-- Works with -->
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-900 uppercase tracking-wider mb-4">Works with</h4>
+          <ul class="space-y-2">
+            <li><span class="text-gray-400 text-sm">Biocanic</span></li>
+            <li><span class="text-gray-400 text-sm">Cerbo</span></li>
+            <li><span class="text-gray-400 text-sm">Practice Better</span></li>
+            <li><span class="text-gray-400 text-sm">Optimantra</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-400 text-xs">&copy; 2026 Greatclicks.io. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-400 hover:text-gray-600 text-xs transition-colors duration-300">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-gray-600 text-xs transition-colors duration-300">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/counter.js"></script>
+</body>
+</html>

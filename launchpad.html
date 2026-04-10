@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Launchpad | Greatclicks.io</title>
+  <meta name="description" content="The Launchpad: a one-time, fixed-scope build. Everything your functional medicine practice needs to start converting inside GoHighLevel. $1,497, delivered in 10-14 days.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#EFF6FF', 100: '#DBEAFE', 200: '#BFDBFE', 300: '#93C5FD',
+              400: '#60A5FA', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8',
+              800: '#1E40AF', 900: '#1E3A8A'
+            },
+            dark: { 800: '#1E293B', 900: '#0F172A', 950: '#030712' }
+          },
+          fontFamily: {
+            heading: ['Syne', 'sans-serif'],
+            body: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-gray-900 font-body antialiased">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex-shrink-0">
+        <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 md:h-10">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">Home</a>
+        <a href="pricing.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">Pricing</a>
+        <a href="launchpad.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide active">The Launchpad</a>
+      </div>
+      <div class="hidden md:block">
+        <a href="#cta" class="group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-primary-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40">
+          Get Pricing
+          <svg class="w-4 h-4 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-gray-900 p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-[60] bg-white flex-col items-center justify-center gap-8 hidden">
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-gray-900 p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <a href="index.html" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">Home</a>
+    <a href="pricing.html" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">Pricing</a>
+    <a href="launchpad.html" class="text-2xl font-heading font-semibold text-gray-900">The Launchpad</a>
+    <a href="#cta" class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-full font-semibold">
+      Get Pricing
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-gray-50 overflow-hidden">
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div data-aos="fade-up" data-aos-duration="900">
+        <span class="inline-flex items-center gap-2 bg-primary-500/10 border border-primary-500/20 rounded-full px-5 py-2 mb-8">
+          <span class="text-primary-600 text-sm font-medium">New to GHL or starting from zero?</span>
+        </span>
+        <h1 class="font-heading font-bold text-4xl md:text-6xl mt-2 mb-6 leading-tight text-gray-900">
+          The Launchpad
+        </h1>
+        <p class="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto mb-6 leading-relaxed">
+          Everything your practice needs to start converting, before your subscription begins.
+        </p>
+        <p class="text-gray-400 text-base max-w-2xl mx-auto mb-10 leading-relaxed">
+          The Starter and Growth plans are built for practitioners that already have a GoHighLevel account and at least a basic system in place. If you are completely new to GHL or starting with nothing built, The Launchpad is where you begin.
+        </p>
+      </div>
+
+      <!-- Price callout -->
+      <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="inline-flex flex-col items-center bg-white border border-gray-200 shadow-lg rounded-2xl px-10 py-8">
+        <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">One-time investment</span>
+        <div class="flex items-baseline gap-1">
+          <span class="font-heading font-bold text-5xl md:text-6xl gradient-text">$1,497</span>
+        </div>
+        <span class="text-gray-500 text-sm mt-2">Delivered in 10 to 14 days</span>
+        <a href="#cta" class="group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-full text-sm font-semibold hover:from-primary-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25 mt-6">
+          Get started
+          <svg class="w-4 h-4 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="wave-divider z-10 mt-16">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C300,20 900,20 1200,60 L1200,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <hr class="gradient-divider">
+
+  <!-- ===== WHAT'S INSIDE ===== -->
+  <section class="relative py-24 md:py-36 bg-white overflow-hidden">
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="relative mb-16">
+        <span class="section-number font-heading" style="color: rgba(37, 99, 235, 0.06);">01</span>
+        <div data-aos="fade-up" data-aos-duration="900" class="text-center">
+          <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">What is inside</span>
+          <h2 class="font-heading font-bold text-3xl md:text-5xl mt-4 leading-[1.12] tracking-[-0.02em] text-dark-950">
+            What is inside The Launchpad
+          </h2>
+          <p class="text-dark-800/50 text-lg mt-4 max-w-2xl mx-auto">A complete client conversion system, wired together and live inside your GHL account.</p>
+        </div>
+      </div>
+
+      <!-- 12 Feature Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 01 Website Form -->
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">01</span>
+            <h3 class="font-heading font-semibold text-dark-950">Website Form</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">A custom intake or inquiry form embedded on your website, connected directly to your GHL pipeline so every submission lands in the right place automatically.</p>
+        </div>
+
+        <!-- 02 Discovery Call Funnel -->
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">02</span>
+            <h3 class="font-heading font-semibold text-dark-950">Discovery Call Funnel</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">A booking page built with FDN-specific copy using root-cause health messaging and the "tired of band-aid solutions" angle. Designed to attract the right patients and convert browsers into booked calls.</p>
+        </div>
+
+        <!-- 03 Appointment Automation -->
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">03</span>
+            <h3 class="font-heading font-semibold text-dark-950">Appointment Automation</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">Automated SMS and email reminders for every discovery call, sent at the right intervals so your no-show rate drops before your subscription even begins.</p>
+        </div>
+
+        <!-- 04 No-Show Recovery -->
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">04</span>
+            <h3 class="font-heading font-semibold text-dark-950">No-Show Recovery</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">An automated missed call text-back and follow-up sequence so no lead slips through when you are with a patient or away from the phone.</p>
+        </div>
+
+        <!-- 05 Pipeline Setup -->
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">05</span>
+            <h3 class="font-heading font-semibold text-dark-950">Pipeline Setup</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">A clean, simple pipeline view inside GHL: New Lead, Nurturing, Discovery Booked, Discovery Completed, Client Won, Client Lost. You always know exactly where every contact stands.</p>
+        </div>
+
+        <!-- 06 Lead Magnet Funnel -->
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">06</span>
+            <h3 class="font-heading font-semibold text-dark-950">Lead Magnet Funnel</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">An opt-in page for a guide like "5 Hidden Stressors Keeping You Sick" or "What Your Doctor Isn't Testing," built to capture cold leads and move them into your nurture system automatically.</p>
+        </div>
+
+        <!-- 07 Contact Tagging -->
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">07</span>
+            <h3 class="font-heading font-semibold text-dark-950">Contact Tagging</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">Systematic tagging applied across your pipeline so every contact is categorized by source, status, and interest, making your list clean and actionable from day one.</p>
+        </div>
+
+        <!-- 08 14-Day Email Nurture -->
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">08</span>
+            <h3 class="font-heading font-semibold text-dark-950">14-Day Email Nurture Sequence</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">Fourteen days of emails that educate your leads on functional lab work, explain why FDN is different from conventional medicine, and build enough trust that booking a discovery call feels like the obvious next step.</p>
+        </div>
+
+        <!-- 09 Email Newsletter Templates -->
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">09</span>
+            <h3 class="font-heading font-semibold text-dark-950">Email Newsletter Templates</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">A set of branded, ready-to-use newsletter templates inside GHL so sending ongoing communication to your list never requires starting from scratch.</p>
+        </div>
+
+        <!-- 10 Programs & Packages -->
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">10</span>
+            <h3 class="font-heading font-semibold text-dark-950">Programs and Packages Setup</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">Your core offers configured inside GHL with functional checkout pages, so when a discovery call converts, the next step is seamless for both you and your new client.</p>
+        </div>
+
+        <!-- 11 Post-Purchase Automation -->
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">11</span>
+            <h3 class="font-heading font-semibold text-dark-950">Post-Purchase Automation</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">A welcome email sequence and program access workflow triggered the moment someone buys, so every new client gets a consistent, professional onboarding experience without you lifting a finger.</p>
+        </div>
+
+        <!-- 12 SMS Feature -->
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="card-hover bg-gray-50 border border-gray-100 rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center text-primary-600 font-heading font-bold text-xs">12</span>
+            <h3 class="font-heading font-semibold text-dark-950">SMS Feature</h3>
+          </div>
+          <p class="text-dark-800/55 text-sm leading-relaxed">Available on request. If you want SMS added to any part of the system, from nurture to reminders to post-purchase onboarding, we wire it in as part of The Launchpad.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="wave-divider z-10">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#F9FAFB"/>
+      </svg>
+    </div>
+  </section>
+
+  <hr class="gradient-divider">
+
+  <!-- ===== HOW THE LAUNCHPAD CONNECTS ===== -->
+  <section class="relative py-24 md:py-36 bg-gray-50 overflow-hidden">
+    <div class="relative max-w-4xl mx-auto px-6">
+      <div class="relative mb-16">
+        <span class="section-number font-heading">02</span>
+        <div data-aos="fade-up" data-aos-duration="900">
+          <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">How it connects</span>
+          <h2 class="font-heading font-bold text-3xl md:text-5xl mt-4 leading-[1.12] tracking-[-0.02em] text-gray-900">
+            The Launchpad is your foundation. The subscription is your growth engine.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="space-y-10">
+        <div data-aos="fade-up" data-aos-duration="900" class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/30 flex items-center justify-center">
+              <span class="text-primary-600 font-heading font-bold text-sm">01</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-heading font-semibold text-xl mb-2 text-gray-900">Onboarding call</h3>
+            <p class="text-gray-500 leading-relaxed">We review your current state. If you need The Launchpad, we scope it and get it scheduled. If you already have a setup, you skip straight to the subscription.</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/30 flex items-center justify-center">
+              <span class="text-primary-600 font-heading font-bold text-sm">02</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-heading font-semibold text-xl mb-2 text-gray-900">The Launchpad build (10-14 days)</h3>
+            <p class="text-gray-500 leading-relaxed">We build your complete conversion system: forms, funnels, pipeline, automations, email sequences, checkout pages, and onboarding workflows. All wired together inside your GHL account.</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="900" class="flex gap-6">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 rounded-full bg-primary-500/10 border border-primary-500/30 flex items-center justify-center">
+              <span class="text-primary-600 font-heading font-bold text-sm">03</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-heading font-semibold text-xl mb-2 text-gray-900">Your subscription begins</h3>
+            <p class="text-gray-500 leading-relaxed">The moment The Launchpad is done, your Starter or Growth plan picks up exactly where it left off. Your first build cycle starts immediately with your system already live and working.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="gradient-divider">
+
+  <!-- ===== PRICING BOX ===== -->
+  <section class="relative py-24 md:py-36 bg-white overflow-hidden">
+    <div class="relative max-w-3xl mx-auto px-6 text-center">
+      <div data-aos="zoom-in" data-aos-duration="900" class="pricing-glow bg-gray-50 border-2 border-primary-500/30 rounded-2xl p-10 md:p-14">
+        <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">One-time build</span>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl mt-4 mb-2 leading-[1.12] tracking-[-0.02em] text-gray-900">The Launchpad</h2>
+        <div class="flex items-baseline justify-center gap-2 mb-4">
+          <span class="font-heading font-bold text-5xl md:text-6xl gradient-text">$1,497</span>
+        </div>
+        <p class="text-gray-500 mb-8">Delivered in 10 to 14 days. Connects directly into either the Starter or Growth plan the moment it is complete.</p>
+
+        <a href="#cta" class="btn-primary group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-4 rounded-full text-base font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 mb-6">
+          Get Started
+          <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+
+        <p class="text-gray-400 text-sm">Already have a GHL setup? You may not need The Launchpad at all. Tell us where you are on your onboarding call and we will confirm the right starting point.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="gradient-divider">
+
+  <!-- ===== FINAL CTA ===== -->
+  <section id="cta" class="relative py-20 md:py-32 bg-gray-50 overflow-hidden">
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="font-heading font-bold text-3xl md:text-5xl mb-6 leading-tight text-gray-900">
+        Ready to launch your automated practice?
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-gray-500 text-lg leading-relaxed mb-10">
+        The Launchpad gives you everything you need to start converting from day one. Get your complete GHL system built, wired, and live in 10 to 14 days.
+      </p>
+      <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <a href="#" class="group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-4 rounded-full text-base font-semibold hover:from-primary-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40">
+          Get Started with The Launchpad
+          <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <p data-aos="fade-up" data-aos-delay="300" class="text-gray-400 text-sm">
+        Built for functional and integrative medicine. Powered by GoHighLevel.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-white border-t border-gray-200 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">A done-for-you automation service built specifically for integrative and functional medicine practitioners using GoHighLevel.</p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-500 uppercase tracking-wider mb-4">Pages</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Home</a></li>
+            <li><a href="pricing.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Pricing</a></li>
+            <li><a href="launchpad.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">The Launchpad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-500 uppercase tracking-wider mb-4">Works with</h4>
+          <ul class="space-y-2">
+            <li><span class="text-gray-400 text-sm">Biocanic</span></li>
+            <li><span class="text-gray-400 text-sm">Cerbo</span></li>
+            <li><span class="text-gray-400 text-sm">Practice Better</span></li>
+            <li><span class="text-gray-400 text-sm">Optimantra</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-400 text-xs">&copy; 2026 Greatclicks.io. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-400 hover:text-gray-600 text-xs transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-gray-600 text-xs transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>

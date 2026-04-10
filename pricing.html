@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | Greatclicks.io</title>
+  <meta name="description" content="Simple, transparent pricing for done-for-you GHL automation. Starter at $497/mo, Growth at $797/mo. No contracts, cancel anytime.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#EFF6FF', 100: '#DBEAFE', 200: '#BFDBFE', 300: '#93C5FD',
+              400: '#60A5FA', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8',
+              800: '#1E40AF', 900: '#1E3A8A'
+            },
+            dark: { 800: '#1E293B', 900: '#0F172A', 950: '#030712' }
+          },
+          fontFamily: {
+            heading: ['Syne', 'sans-serif'],
+            body: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-gray-900 font-body antialiased">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex-shrink-0">
+        <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 md:h-10">
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">Home</a>
+        <a href="pricing.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide active">Pricing</a>
+        <a href="launchpad.html" class="nav-link text-gray-600 hover:text-gray-900 text-sm font-medium tracking-wide">The Launchpad</a>
+      </div>
+      <div class="hidden md:block">
+        <a href="#cta" class="btn-primary group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40">
+          Get Pricing
+          <svg class="w-4 h-4 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-gray-900 p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-[60] bg-white flex-col items-center justify-center gap-8 hidden">
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-gray-900 p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <a href="index.html" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">Home</a>
+    <a href="pricing.html" class="text-2xl font-heading font-semibold text-gray-900">Pricing</a>
+    <a href="launchpad.html" class="text-2xl font-heading font-semibold text-gray-400 hover:text-gray-900 transition-colors">The Launchpad</a>
+    <a href="#cta" class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-3 rounded-full font-semibold">
+      Get Pricing
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gray-50 overflow-hidden">
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <div data-aos="fade-up" data-aos-duration="900">
+        <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">Subscription plans</span>
+        <h1 class="font-heading font-bold text-4xl md:text-6xl mt-4 mb-6 leading-[1.12] tracking-[-0.02em] text-gray-900">
+          Pick the plan that matches where your practice is right now.
+        </h1>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          Both plans are month-to-month. No long-term contracts. Cancel anytime with 30 days notice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PRICING CARDS ===== -->
+  <section class="relative py-16 md:py-24 bg-white overflow-hidden">
+    <div class="relative max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-10">
+
+        <!-- STARTER PLAN -->
+        <div data-aos="fade-right" data-aos-delay="0" data-aos-duration="900" class="card-hover bg-gray-50 border-2 border-gray-100 rounded-2xl p-8 lg:p-10 flex flex-col">
+          <div class="mb-8">
+            <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">Starter</span>
+            <div class="flex items-baseline gap-1 mt-2">
+              <span class="font-heading font-bold text-5xl text-dark-950">$497</span>
+              <span class="text-dark-800/50 text-lg">/month</span>
+            </div>
+            <p class="text-dark-800/60 mt-3">Best for practitioners that have a basic GHL setup and want consistent automation progress each month.</p>
+          </div>
+
+          <!-- Features -->
+          <div class="space-y-4 mb-8 flex-grow">
+            <p class="text-dark-950 font-heading font-semibold text-sm uppercase tracking-wider">Included each month</p>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">5 custom workflows or automations</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">1 funnel per month (VSL, Webinar, or Lead Magnet)</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">Access to the Greatclicks request portal</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">GHL account support and maintenance</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">Email and Loom walkthrough for every deliverable</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">Full delivery within a 30-day build cycle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Good fit -->
+          <div class="mb-8">
+            <p class="text-dark-950 font-heading font-semibold text-sm uppercase tracking-wider mb-3">Good fit if you are</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Running a solo or small team practice</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Already in GHL but not maximizing it</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Looking to automate follow-up, reminders, and lead capture first</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Not yet ready for EMR integration work</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA -->
+          <a href="#cta" class="group inline-flex items-center justify-center gap-2 w-full border-2 border-primary-500 text-primary-600 px-8 py-4 rounded-full text-base font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300">
+            Get started
+            <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+
+        <!-- GROWTH PLAN -->
+        <div data-aos="fade-left" data-aos-delay="150" data-aos-duration="900" class="pricing-glow relative bg-gradient-to-b from-primary-50 to-white border-2 border-primary-500 rounded-2xl p-8 lg:p-10 flex flex-col">
+          <!-- Popular badge -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="bg-gradient-to-r from-primary-600 to-primary-500 text-white text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">Most Popular</span>
+          </div>
+
+          <div class="mb-8">
+            <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">Growth</span>
+            <div class="flex items-baseline gap-1 mt-2">
+              <span class="font-heading font-bold text-5xl text-dark-950">$797</span>
+              <span class="text-dark-800/50 text-lg">/month</span>
+            </div>
+            <p class="text-dark-800/60 mt-3">Best for practitioners scaling patient acquisition and ready to connect their full tech stack.</p>
+          </div>
+
+          <!-- Features -->
+          <div class="space-y-4 mb-8 flex-grow">
+            <p class="text-dark-950 font-heading font-semibold text-sm uppercase tracking-wider">Included each month</p>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm"><strong>8</strong> custom workflows or automations</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm"><strong>2</strong> funnels per month (VSL, Webinar, or Lead Magnet)</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">Access to the Greatclicks request portal</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">GHL account support and maintenance</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm"><strong>Priority</strong> async communication</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm"><strong>EMR integration support</strong> (Biocanic, Cerbo, Practice Better, Optimantra)</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">Email and Loom walkthrough for every deliverable</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-dark-800/70 text-sm">Full delivery within a 30-day build cycle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Good fit -->
+          <div class="mb-8">
+            <p class="text-dark-950 font-heading font-semibold text-sm uppercase tracking-wider mb-3">Good fit if you are</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Scaling a multi-provider or growing practice</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Running paid ads or referral programs that need proper automation behind them</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Ready to connect GHL with your EMR for a smoother patient experience</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary-500 mt-1.5">&#8226;</span>
+                <span class="text-dark-800/60 text-sm">Comfortable managing priorities async through the request portal</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA -->
+          <a href="#cta" class="btn-primary group inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-4 rounded-full text-base font-semibold shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40">
+            Get started
+            <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Fine print -->
+      <div data-aos="fade-up" data-aos-duration="900" class="text-center mt-10">
+        <p class="text-dark-800/40 text-sm">Both plans are month-to-month. Cancel anytime with 30 days notice. Unused deliverables in a given month do not roll over.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== LAUNCHPAD TEASER ===== -->
+  <section class="relative py-16 md:py-24 bg-gray-50 overflow-hidden">
+    <div class="relative max-w-3xl mx-auto px-6 text-center">
+      <div data-aos="fade-up" data-aos-duration="900">
+        <span class="section-icon"></span><span class="text-primary-600 text-sm font-semibold uppercase tracking-[0.15em]">New to GHL or starting from zero?</span>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl mt-4 mb-6 leading-[1.12] tracking-[-0.02em] text-gray-900">
+          Start with The Launchpad.
+        </h2>
+        <p class="text-gray-500 text-lg leading-relaxed mb-8">
+          A one-time, fixed-scope build that gives your practice everything it needs to start converting, before your subscription begins. Delivered in 10 to 14 days.
+        </p>
+        <a href="launchpad.html" class="group inline-flex items-center gap-2 border-2 border-primary-500 text-primary-600 px-8 py-4 rounded-full text-base font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300">
+          See what is inside The Launchpad
+          <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PRICING FAQ ===== -->
+  <section class="relative py-16 md:py-24 bg-white overflow-hidden">
+    <div class="relative max-w-3xl mx-auto px-6">
+      <div data-aos="fade-up" data-aos-duration="900" class="text-center mb-12">
+        <h2 class="font-heading font-bold text-3xl md:text-4xl leading-[1.12] tracking-[-0.02em] text-dark-950">Common pricing questions</h2>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="900" class="space-y-3">
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">Is there a contract?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">No. Both plans are month-to-month. You can cancel anytime with 30 days notice. No penalties, no lock-in.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">What counts as one workflow or automation?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">One complete, functional workflow is one deliverable. A 3-step appointment reminder sequence is one workflow. A 5-email nurture sequence is one workflow. A VSL funnel with connected automation is one funnel deliverable. We confirm scope with you at the start of each build cycle so there are no surprises.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">Do unused deliverables roll over?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">No. Each month's deliverables are scoped for that cycle. In practice, the build queue rarely has unused capacity because we plan ahead together on your onboarding call.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">Can I switch plans?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">Yes. You can upgrade or downgrade at the start of any new build cycle.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-gray-200">
+          <button class="faq-trigger w-full flex items-center justify-between p-6 text-left cursor-pointer">
+            <span class="font-heading font-semibold text-dark-950 pr-4">What happens if I need something outside the plan scope?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-dark-800/60 leading-relaxed pb-6">We flag it before touching anything. Out-of-scope work is quoted separately and only starts once you approve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FINAL CTA ===== -->
+  <section id="cta" class="relative py-20 md:py-32 bg-gray-50 overflow-hidden">
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="font-heading font-bold text-3xl md:text-5xl mb-6 leading-tight text-gray-900">
+        Your practice is ready for automations that actually run.
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-gray-500 text-lg leading-relaxed mb-10">
+        Get Pricing. We will review your setup, confirm which plan fits, and either get The Launchpad scheduled or kick off your first build cycle on the spot.
+      </p>
+      <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <a href="#" class="group inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-4 rounded-full text-base font-semibold hover:from-primary-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40">
+          Get Pricing
+          <svg class="w-5 h-5 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <p data-aos="fade-up" data-aos-delay="300" class="text-gray-400 text-sm">
+        Built for functional medicine. Powered by GoHighLevel.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-white border-t border-gray-200 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <img src="images/Greatclicks-logo.png" alt="Greatclicks" class="h-8 mb-4">
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">A done-for-you automation service built specifically for integrative and functional medicine practitioners using GoHighLevel.</p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-500 uppercase tracking-wider mb-4">Pages</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Home</a></li>
+            <li><a href="pricing.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Pricing</a></li>
+            <li><a href="launchpad.html" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">The Launchpad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-sm text-gray-500 uppercase tracking-wider mb-4">Works with</h4>
+          <ul class="space-y-2">
+            <li><span class="text-gray-400 text-sm">Biocanic</span></li>
+            <li><span class="text-gray-400 text-sm">Cerbo</span></li>
+            <li><span class="text-gray-400 text-sm">Practice Better</span></li>
+            <li><span class="text-gray-400 text-sm">Optimantra</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-400 text-xs">&copy; 2026 Greatclicks.io. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-400 hover:text-gray-600 text-xs transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-gray-600 text-xs transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>
