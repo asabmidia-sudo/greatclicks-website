@@ -1,3 +1,7 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/practice-growth-system", "destination": "https://practice-growth-system.vercel.app/practice-growth-system" },
+    { "source": "/practice-growth-system/:path*", "destination": "https://practice-growth-system.vercel.app/practice-growth-system/:path*" }
+  ]
 }
