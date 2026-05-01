@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-primary: #0040C1;
+  --color-primary-hover: #00359E;
+  --color-primary-deep: #0042C5;
+  --color-primary-mid: #2970FF;
+  --color-primary-light: #6199FF;
+  --color-primary-bg: #EFF4FF;
+
+  /* Neutrals */
+  --color-dark: #111827;
+  --color-body: #4B5563;
+  --color-muted: #6B7280;
+  --color-line: #E5E7EB;
+
+  /* Typography */
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-display: "Instrument Sans", system-ui, sans-serif;
+
+  /* Section vertical rhythm */
+  --spacing-section: 5rem;
+  --spacing-section-lg: 7.5rem;
+
+  /* Container widths */
+  --container-content: 80rem;
+  --container-narrow: 56rem;
+
+  /* Animations */
+  --animate-marquee: marquee-scroll 35s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-body);
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-dark);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+}
+
+@utility container-content {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--container-content);
+  padding-inline: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility container-narrow {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--container-narrow);
+  padding-inline: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility section-y {
+  padding-block: var(--spacing-section);
+
+  @media (min-width: 768px) {
+    padding-block: var(--spacing-section-lg);
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
