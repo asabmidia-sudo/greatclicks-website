@@ -4,8 +4,8 @@ const stages = [
   { number: '01', title: 'Lead Generation' },
   { number: '02', title: 'Lead Response' },
   { number: '03', title: 'Discovery Call Conversion' },
-  { number: '04', title: 'Enrollment and Onboarding' },
-  { number: '05', title: 'Retention and Lab Follow-Up' },
+  { number: '04', title: 'Enrollment & Onboarding' },
+  { number: '05', title: 'Retention & Lab Follow-Up' },
   { number: '06', title: 'Referral Generation' },
 ];
 
