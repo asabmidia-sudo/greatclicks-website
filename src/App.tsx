@@ -1,46 +1,37 @@
 import { Routes, Route } from 'react-router-dom';
+import { Nav } from './components/layout/Nav';
+import { Footer } from './components/layout/Footer';
+import { ScrollToTop } from './components/layout/ScrollToTop';
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { CaseStudies } from './pages/CaseStudies';
+import { InceptionCaseStudy } from './pages/InceptionCaseStudy';
+import { Quiz } from './pages/Quiz';
+import { QuizResults } from './pages/QuizResults';
+import { Assessment } from './pages/Assessment';
+import { Contact } from './pages/Contact';
+import { NotFound } from './pages/NotFound';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="flex min-h-screen flex-col bg-white">
+      <ScrollToTop />
+      <Nav />
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<PlaceholderHome />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/inception-telehealth" element={<InceptionCaseStudy />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/quiz/results" element={<QuizResults />} />
+          <Route path="/assessment" element={<Assessment />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-    </div>
-  );
-}
-
-function PlaceholderHome() {
-  return (
-    <section className="section-y">
-      <div className="container-content">
-        <p className="eyebrow">Practice Growth System</p>
-        <h1 className="mt-6 text-5xl md:text-7xl">
-          Phase 1 shell ready.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg">
-          Design tokens loaded. Layout shell mounted. Ready for Phase 2.
-        </p>
-
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <TokenSwatch label="primary" className="bg-primary text-white" />
-          <TokenSwatch label="primary-deep" className="bg-primary-deep text-white" />
-          <TokenSwatch label="primary-mid" className="bg-primary-mid text-white" />
-          <TokenSwatch label="primary-light" className="bg-primary-light text-white" />
-          <TokenSwatch label="primary-bg" className="bg-primary-bg text-dark" />
-          <TokenSwatch label="dark" className="bg-dark text-white" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function TokenSwatch({ label, className }: { label: string; className: string }) {
-  return (
-    <div className={`rounded-2xl px-5 py-6 text-sm font-medium ${className}`}>
-      {label}
+      <Footer />
     </div>
   );
 }
