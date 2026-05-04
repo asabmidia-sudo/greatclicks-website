@@ -68,12 +68,12 @@ Create a new branch from master called `redesign/practice-growth-system`. All wo
 ### 4. The Framework (numbered, six stages)
 - Eyebrow: THE FRAMEWORK
 - Heading: Six stages. All measurable. All fixable.
-- 01 Lead Generation
+- 01 Lead Capture
 - 02 Lead Response
 - 03 Discovery Call Conversion
-- 04 Enrollment and Onboarding
-- 05 Retention and Lab Follow-Up
-- 06 Referral Generation
+- 04 Enrollment & Onboarding
+- 05 Retention & Lab Follow-Up
+- 06 Referrals & Reactivation
 
 ### 5. How It Works (numbered, three steps)
 - Eyebrow: HOW IT WORKS

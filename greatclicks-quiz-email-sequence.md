@@ -178,7 +178,7 @@ Founder, Greatclicks
 
 ---
 
-## Variant 2A — Lead Generation gap
+## Variant 2A — Lead Capture gap
 
 **Subject:** One channel won't grow a clinic
 **Alt subjects:**
@@ -189,7 +189,7 @@ Founder, Greatclicks
 
 {{contact.first_name}},
 
-Your top gap is Lead Generation.
+Your top gap is Lead Capture.
 
 Most FM clinics here run one channel. Word of mouth, Google ads, or a single referral source.
 
@@ -274,7 +274,7 @@ Aaron
 
 {{contact.first_name}},
 
-Your top gap is Enrollment and Onboarding.
+Your top gap is Enrollment & Onboarding.
 
 When onboarding is manual, 15 to 25 percent of paid patients drop off in the first 30 days.
 
@@ -301,7 +301,7 @@ Aaron
 
 {{contact.first_name}},
 
-Your top gap is Retention and Lab Follow-Up.
+Your top gap is Retention & Lab Follow-Up.
 
 The drop-off pattern is consistent. Month one is high engagement. Month three is silence. Month six is gone.
 
@@ -319,7 +319,7 @@ Aaron
 
 ---
 
-## Variant 2F — Referral Generation gap
+## Variant 2F — Referrals & Reactivation gap
 
 **Subject:** Your biggest channel is the one you ignored
 **Alt subjects:**
@@ -330,7 +330,7 @@ Aaron
 
 {{contact.first_name}},
 
-Your top gap is Referral Generation.
+Your top gap is Referrals & Reactivation.
 
 Inception Telehealth's biggest lead source was not paid ads. It was their affiliate program.
 
@@ -428,12 +428,12 @@ Send Email 1 (Day 0, immediate)
 Wait 2 days
    ↓
 Send Email 2 (Day 2)
-   IF top_gap_1 = "Lead Generation" → send Variant 2A
+   IF top_gap_1 = "Lead Capture" → send Variant 2A
    IF top_gap_1 = "Lead Response" → send Variant 2B
    IF top_gap_1 = "Discovery Call Conversion" → send Variant 2C
    IF top_gap_1 = "Enrollment & Onboarding" → send Variant 2D
    IF top_gap_1 = "Retention & Lab Follow-Up" → send Variant 2E
-   IF top_gap_1 = "Referral Generation" → send Variant 2F
+   IF top_gap_1 = "Referrals & Reactivation" → send Variant 2F
    ↓
 Wait 3 days
    ↓

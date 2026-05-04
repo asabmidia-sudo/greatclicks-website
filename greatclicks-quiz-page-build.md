@@ -65,7 +65,7 @@ Options:
 - Operations / Practice Manager → 50
 - Other staff → 25
 
-**Q3. Lead Generation**
+**Q3. Lead Capture**
 Question: How does your clinic generate new patient leads?
 Options:
 - We don't actively generate leads. Word of mouth only. → 0
@@ -110,7 +110,7 @@ Options:
 - Automated review-to-follow-up workflow. → 75
 - Fully integrated lab pipeline with EHR + automation. → 100
 
-**Q8. Referral Generation**
+**Q8. Referrals & Reactivation**
 Question: Do you have a referral or affiliate program?
 Options:
 - No, we rely on organic word of mouth. → 0
@@ -147,12 +147,12 @@ type QuizResult = {
 ## Stage Labels
 
 ```
-lead_gen → "Lead Generation"
+lead_gen → "Lead Capture"
 lead_response → "Lead Response"
 consult_conversion → "Discovery Call Conversion"
 onboarding → "Enrollment & Onboarding"
 retention → "Retention & Lab Follow-Up"
-referral → "Referral Generation"
+referral → "Referrals & Reactivation"
 ```
 
 ## Gap Impact Copy (for results page top 3 gaps)
@@ -266,7 +266,7 @@ type GhlPayload = {
   };
   
   // Top 3 gaps as both array and individual fields for easy GHL mapping
-  topGapsLabel: string; // comma-separated, e.g. "Lead Generation, Retention & Lab Follow-Up, Referral Generation"
+  topGapsLabel: string; // comma-separated, e.g. "Lead Capture, Retention & Lab Follow-Up, Referrals & Reactivation"
   topGap1: string;
   topGap2: string;
   topGap3: string;

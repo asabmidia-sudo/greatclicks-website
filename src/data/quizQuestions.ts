@@ -22,12 +22,12 @@ export type QuizQuestion = {
 };
 
 export const stageLabels: Record<StageId, string> = {
-  lead_gen: 'Lead Generation',
+  lead_gen: 'Lead Capture',
   lead_response: 'Lead Response',
   consult_conversion: 'Discovery Call Conversion',
   onboarding: 'Enrollment & Onboarding',
   retention: 'Retention & Lab Follow-Up',
-  referral: 'Referral Generation',
+  referral: 'Referrals & Reactivation',
 };
 
 export const stageOrder: StageId[] = [
