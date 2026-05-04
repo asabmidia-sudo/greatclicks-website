@@ -26,8 +26,8 @@ export function About() {
             <ScrollReveal delay={300}>
               <div className="overflow-hidden rounded-3xl bg-line">
                 <img
-                  src="/aaron-headshot-placeholder.jpg"
-                  alt="Aaron, founder of Greatclicks"
+                  src="/aaron-headshot.jpg"
+                  alt="Aaron Lester, founder of Greatclicks"
                   className="aspect-square h-full w-full object-cover"
                   width={800}
                   height={800}
