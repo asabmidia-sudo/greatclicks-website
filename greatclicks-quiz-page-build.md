@@ -230,7 +230,7 @@ Create `api/quiz/submit.ts` (Vercel serverless function).
 Store in environment variable: `GHL_WEBHOOK_URL`
 Default value (set in Vercel env vars):
 ```
-https://services.leadconnectorhq.com/hooks/kyeedObOAb2jF27mJJwP/webhook-trigger/8838f0ce-b55c-4447-8486-fcffad9da7ec
+https://services.leadconnectorhq.com/hooks/kyeedObOAb2jF27mJJwP/webhook-trigger/4577f83f-f890-40c6-aece-1cf0afea09ba
 ```
 
 ### Endpoint behavior
@@ -367,7 +367,7 @@ Update `src/App.tsx` routing to wire `/quiz` and `/quiz/results` to real compone
 Add to `.env.local` and Vercel project settings:
 
 ```
-GHL_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/kyeedObOAb2jF27mJJwP/webhook-trigger/8838f0ce-b55c-4447-8486-fcffad9da7ec
+GHL_WEBHOOK_URL=https://services.leadconnectorhq.com/hooks/kyeedObOAb2jF27mJJwP/webhook-trigger/4577f83f-f890-40c6-aece-1cf0afea09ba
 ```
 
 Do not hardcode the URL in the function. Always read from `process.env.GHL_WEBHOOK_URL`.
