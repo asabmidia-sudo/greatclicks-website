@@ -58,6 +58,10 @@ function validatePayload(body: unknown): ValidationResult {
   if (typeof b.topGap3 !== 'string') return { ok: false, detail: 'topGap3' };
   if (!Array.isArray(b.responses) || b.responses.length !== 8)
     return { ok: false, detail: 'responses' };
+  if (typeof b.disqualified !== 'boolean')
+    return { ok: false, detail: 'disqualified' };
+  if (b.disqualificationReason !== null && typeof b.disqualificationReason !== 'string')
+    return { ok: false, detail: 'disqualificationReason' };
   if (b.source !== 'practice-growth-quiz') return { ok: false, detail: 'source' };
 
   return { ok: true };

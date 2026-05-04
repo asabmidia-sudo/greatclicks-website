@@ -25,12 +25,15 @@ export function bandForScore(score: number): ScoreBand {
   return 'mature';
 }
 
+export function getDisqualificationReason(answers: QuizAnswers): string | null {
+  const reasons: string[] = [];
+  if (answers['monthly_revenue'] === 0) reasons.push('below_revenue_threshold');
+  if (answers['role'] === 25) reasons.push('no_admin_staff');
+  return reasons.length === 0 ? null : reasons.join(',');
+}
+
 export function isDisqualified(answers: QuizAnswers): boolean {
-  const revenue = answers['monthly_revenue'];
-  const role = answers['role'];
-  if (revenue === 0) return true;
-  if (role === 25) return true;
-  return false;
+  return getDisqualificationReason(answers) !== null;
 }
 
 export function computeQuizResult(answers: QuizAnswers): QuizResult {

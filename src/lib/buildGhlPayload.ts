@@ -1,5 +1,11 @@
 import { quizQuestions, type QuizQuestion } from '../data/quizQuestions';
-import type { QuizAnswers, QuizResult, ScoreBand } from './quizScoring';
+import {
+  getDisqualificationReason,
+  isDisqualified,
+  type QuizAnswers,
+  type QuizResult,
+  type ScoreBand,
+} from './quizScoring';
 
 export type ContactInfo = {
   firstName: string;
@@ -37,6 +43,8 @@ export type GhlPayload = {
   role: string;
   responses: QuizResponse[];
   recommendation: string;
+  disqualified: boolean;
+  disqualificationReason: string | null;
   source: 'practice-growth-quiz';
   submittedAt: string;
 };
@@ -138,6 +146,8 @@ export function buildGhlPayload(
     role: findOptionLabel(roleQ, result.qualifying.role),
     responses: buildResponses(answers),
     recommendation: buildRecommendation(result),
+    disqualified: isDisqualified(answers),
+    disqualificationReason: getDisqualificationReason(answers),
     source: 'practice-growth-quiz',
     submittedAt: new Date().toISOString(),
   };
