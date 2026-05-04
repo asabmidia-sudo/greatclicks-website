@@ -11,8 +11,7 @@ import { buildGhlPayload, type ContactInfo } from '../lib/buildGhlPayload';
 const SESSION_KEY = 'pgq_session';
 const ANSWERS_KEY = 'pgq_answers';
 const STEP_KEY = 'pgq_step';
-const WEBHOOK_URL =
-  'https://services.leadconnectorhq.com/hooks/kyeedObOAb2jF27mJJwP/webhook-trigger/4577f83f-f890-40c6-aece-1cf0afea09ba';
+const SUBMIT_ENDPOINT = '/api/quiz-submit';
 
 const STEPS = ['landing', '1', '2', '3', '4', '5', '6', '7', '8', 'email'] as const;
 type Step = (typeof STEPS)[number];
@@ -145,7 +144,7 @@ export function Quiz() {
     console.log('[quiz] submitting payload', payload);
 
     try {
-      const res = await fetch(WEBHOOK_URL, {
+      const res = await fetch(SUBMIT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
