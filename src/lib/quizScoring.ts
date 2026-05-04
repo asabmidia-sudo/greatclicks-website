@@ -25,6 +25,14 @@ export function bandForScore(score: number): ScoreBand {
   return 'mature';
 }
 
+export function isDisqualified(answers: QuizAnswers): boolean {
+  const revenue = answers['monthly_revenue'];
+  const role = answers['role'];
+  if (revenue === 0) return true;
+  if (role === 25) return true;
+  return false;
+}
+
 export function computeQuizResult(answers: QuizAnswers): QuizResult {
   const stageScores: StageScore[] = stageOrder.map((stage) => ({
     stage,

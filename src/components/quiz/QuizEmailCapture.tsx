@@ -2,23 +2,33 @@ import type { FormEvent } from 'react';
 import { Button } from '../ui/Button';
 import type { ContactInfo } from '../../lib/buildGhlPayload';
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 type QuizEmailCaptureProps = {
   contact: ContactInfo;
   onChange: (next: ContactInfo) => void;
   onSubmit: () => void;
-  onSkip: () => void;
+  onBack?: () => void;
   isSubmitting?: boolean;
+  error?: string | null;
 };
 
 export function QuizEmailCapture({
   contact,
   onChange,
   onSubmit,
-  onSkip,
+  onBack,
   isSubmitting = false,
+  error = null,
 }: QuizEmailCaptureProps) {
+  const isValid =
+    contact.firstName.trim() !== '' &&
+    EMAIL_RE.test(contact.email.trim()) &&
+    contact.companyName.trim() !== '';
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!isValid || isSubmitting) return;
     onSubmit();
   };
 
@@ -55,19 +65,29 @@ export function QuizEmailCapture({
           autoComplete="organization"
         />
 
-        <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
-          <Button type="submit" variant="primary" disabled={isSubmitting}>
+        {error && (
+          <p role="alert" className="text-sm font-medium text-red-600">
+            {error}
+          </p>
+        )}
+
+        <div className="flex items-center justify-between gap-4 pt-4">
+          {onBack ? (
+            <button
+              type="button"
+              onClick={onBack}
+              disabled={isSubmitting}
+              className="group inline-flex min-h-[44px] items-center text-sm font-medium text-body transition-colors hover:text-primary disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <span className="mr-2 transition-transform group-hover:-translate-x-1" aria-hidden="true">←</span>
+              Back
+            </button>
+          ) : (
+            <span aria-hidden="true" />
+          )}
+          <Button type="submit" variant="primary" disabled={isSubmitting || !isValid}>
             {isSubmitting ? 'Sending' : 'Send my results'}
           </Button>
-          <button
-            type="button"
-            onClick={onSkip}
-            disabled={isSubmitting}
-            className="group inline-flex min-h-[44px] items-center justify-center text-sm font-medium text-body transition-colors hover:text-primary disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            Skip to results
-            <span className="ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
-          </button>
         </div>
       </form>
     </div>
