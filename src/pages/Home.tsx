@@ -10,7 +10,7 @@ import { SkipQuiz } from '../components/sections/SkipQuiz';
 import { FAQSection } from '../components/sections/FAQSection';
 import { BottomCTABanner } from '../components/ui/BottomCTABanner';
 
-const marqueeItems = ['Real results', 'Operator built', 'Functional medicine first'];
+const marqueeItems = ['Built for health practices', 'Operator built', 'Real results'];
 
 export function Home() {
   return (
