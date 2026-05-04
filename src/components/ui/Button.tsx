@@ -5,6 +5,9 @@ type ButtonProps = {
   children: ReactNode;
   to?: string;
   href?: string;
+  onClick?: () => void;
+  type?: 'button' | 'submit';
+  disabled?: boolean;
   variant?: 'primary' | 'secondary';
   showArrow?: boolean;
   className?: string;
@@ -19,11 +22,14 @@ export function Button({
   children,
   to,
   href,
+  onClick,
+  type = 'button',
+  disabled = false,
   variant = 'primary',
   showArrow = true,
   className = '',
 }: ButtonProps) {
-  const classes = `group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 ${variants[variant]} ${className}`;
+  const classes = `group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50 ${variants[variant]} ${className}`;
 
   const content = (
     <>
@@ -57,9 +63,17 @@ export function Button({
     );
   }
 
+  if (href) {
+    return (
+      <a href={href} className={classes}>
+        {content}
+      </a>
+    );
+  }
+
   return (
-    <a href={href ?? '#'} className={classes}>
+    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
       {content}
-    </a>
+    </button>
   );
 }
