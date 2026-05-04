@@ -152,10 +152,6 @@ export function Quiz() {
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-      sessionStorage.removeItem(SESSION_KEY);
-      sessionStorage.removeItem(ANSWERS_KEY);
-      sessionStorage.removeItem(STEP_KEY);
-
       navigate('/quiz/results', {
         state: {
           score: result.practiceGrowthScore,
