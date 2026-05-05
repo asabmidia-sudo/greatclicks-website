@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Nav } from './components/layout/Nav';
 import { Footer } from './components/layout/Footer';
 import { ScrollToTop } from './components/layout/ScrollToTop';
@@ -9,7 +9,6 @@ import { InceptionCaseStudy } from './pages/InceptionCaseStudy';
 import { Quiz } from './pages/Quiz';
 import { QuizResults } from './pages/QuizResults';
 import { Assessment } from './pages/Assessment';
-import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
 
 export default function App() {
@@ -26,7 +25,7 @@ export default function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/quiz/results" element={<QuizResults />} />
           <Route path="/assessment" element={<Assessment />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Navigate to="/quiz" replace />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
