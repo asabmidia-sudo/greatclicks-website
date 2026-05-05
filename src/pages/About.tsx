@@ -22,15 +22,15 @@ export function About() {
             </p>
           </ScrollReveal>
 
-          <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-[1fr_1fr] md:items-center md:gap-16">
+          <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-[auto_1fr] md:items-center md:gap-16">
             <ScrollReveal delay={300}>
-              <div className="overflow-hidden rounded-3xl bg-line">
+              <div className="mx-auto w-full max-w-[200px] overflow-hidden rounded-3xl bg-line md:mx-0">
                 <img
                   src="/aaron-headshot.jpg"
                   alt="Aaron Lester, founder of Greatclicks"
                   className="aspect-square h-full w-full object-cover"
-                  width={800}
-                  height={800}
+                  width={200}
+                  height={200}
                 />
               </div>
             </ScrollReveal>
