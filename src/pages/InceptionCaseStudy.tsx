@@ -13,7 +13,16 @@ export function InceptionCaseStudy() {
           <ScrollReveal>
             <p className="eyebrow">Case Study</p>
           </ScrollReveal>
-          <ScrollReveal delay={100}>
+          <ScrollReveal delay={80}>
+            <img
+              src="/inception-logo.png"
+              alt="Inception Telehealth and Wellness"
+              className="mt-6 h-auto w-full max-w-[280px] md:mt-8 md:max-w-[360px]"
+              width={1336}
+              height={459}
+            />
+          </ScrollReveal>
+          <ScrollReveal delay={160}>
             <h1 className="mt-6 max-w-5xl text-5xl leading-[1.02] md:mt-8 md:text-7xl lg:text-[6.5rem]">
               {cs.headline}
             </h1>
