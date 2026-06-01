@@ -18,7 +18,7 @@ export function About() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="mt-6 max-w-2xl text-lg md:mt-8 md:text-2xl">
-              I build operations for functional medicine clinics. Not funnels. Not one-off automations. Real systems that run the practice.
+              I build operations for functional medicine practices. Not funnels. Not one-off automations. Real systems that run the practice.
             </p>
           </ScrollReveal>
 
@@ -40,7 +40,7 @@ export function About() {
                 <Stat value="250+" label="Practice owners helped" />
               </ScrollReveal>
               <ScrollReveal delay={460}>
-                <Stat value="2020" label="Operations for FM clinics since" />
+                <Stat value="2020" label="Operations for FM practices since" />
               </ScrollReveal>
             </div>
           </div>
@@ -52,7 +52,7 @@ export function About() {
           text={[
             'Functional medicine is not transactional. The patient relationship is long. The lab work is detailed. The protocols are personal. The billing is complicated.',
             'Generic agencies miss this. They build funnels that break the moment a Cerbo workflow needs to fire. They sell you a CRM and disappear. They never log into your EHR.',
-            'I built Greatclicks specifically for this model. I partnered with Biocanic to be their official build channel for clinics on their platform. I have also built systems for clients running on Cerbo, Optimantra, and Practice Better.',
+            'I built Greatclicks specifically for this model. I partnered with Biocanic to be their official build channel for practices on their platform. I have also built systems for clients running on Cerbo, Optimantra, and Practice Better.',
             'The work covers GoHighLevel, every major EHR in the space, Stripe, lab pipelines, and every system in between.',
           ]}
         />
@@ -65,8 +65,8 @@ export function About() {
       >
         <Paragraphs
           text={[
-            'The Practice Growth System maps every place a clinic loses money. Lead capture. Lead response. Discovery call conversion. Enrollment and onboarding. Retention and lab follow-up. Referrals and reactivation.',
-            'The Growth Gap Assessment finds the leaks in your practice. The build closes them.',
+            'The Practice Growth System maps every system gap in a practice. Lead capture. Lead response. Discovery call conversion. Enrollment and onboarding. Retention and lab follow-up. Referrals and reactivation.',
+            'The Growth Gap Assessment finds the gaps in your practice. The build closes them.',
             'I do not build and leave. I stay in the loop. I troubleshoot when something breaks. I keep the systems clean so your team can focus on patients.',
           ]}
         />
@@ -100,8 +100,8 @@ export function About() {
       </Section>
 
       <BottomCTABanner
-        heading="Stop stitching it together."
-        subhead="Two minutes. See where revenue is leaking."
+        heading="Stop stitching your practice together."
+        subhead="Two minutes. See where the system breaks."
         primaryCta={{ label: 'Get your Practice Growth Score', to: '/quiz' }}
         secondaryCta={{ label: 'Or book the assessment', to: '/assessment' }}
       />

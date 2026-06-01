@@ -59,7 +59,7 @@ export function QuizEmailCapture({
         />
         <Field
           id="quiz-clinic"
-          label="Clinic name"
+          label="Practice name"
           value={contact.companyName}
           onChange={(v) => onChange({ ...contact, companyName: v })}
           autoComplete="organization"

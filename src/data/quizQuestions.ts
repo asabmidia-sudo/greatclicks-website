@@ -66,7 +66,7 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 'lead_gen',
     stage: 'lead_gen',
-    question: 'How does your clinic generate new patient leads?',
+    question: 'How does your practice generate new patient leads?',
     options: [
       { label: "We don't actively generate leads. Word of mouth only.", value: 0 },
       { label: 'One channel only. Ads, referrals, or content.', value: 25 },

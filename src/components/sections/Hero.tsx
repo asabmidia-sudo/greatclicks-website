@@ -11,12 +11,12 @@ export function Hero() {
         </ScrollReveal>
         <ScrollReveal delay={100}>
           <h1 className="mt-6 max-w-5xl text-5xl leading-[1.02] md:mt-8 md:text-7xl lg:text-[6.5rem]">
-            Your practice is leaking revenue.
+            We build the system that runs your functional medicine practice.
           </h1>
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <p className="mt-8 max-w-xl text-lg md:text-2xl">
-            Find out where in two minutes.
+            Starting from scratch or fixing what is broken. Save time. Save money.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={300}>

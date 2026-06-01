@@ -90,8 +90,8 @@ export function InceptionCaseStudy() {
       </Section>
 
       <BottomCTABanner
-        heading="Stop stitching it together."
-        subhead="Two minutes. See where revenue is leaking."
+        heading="Stop stitching your practice together."
+        subhead="Two minutes. See where the system breaks."
         primaryCta={{ label: 'Get your Practice Growth Score', to: '/quiz' }}
         secondaryCta={{ label: 'Or book the assessment', to: '/assessment' }}
       />

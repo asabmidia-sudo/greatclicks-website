@@ -12,9 +12,9 @@ export function Pain() {
   return (
     <section className="section-y bg-primary-bg">
       <div className="container-content">
-        <p className="eyebrow">Why Most Clinics Stall</p>
+        <p className="eyebrow">Why Most Practices Stall</p>
         <h2 className="mt-4 max-w-3xl text-4xl md:mt-6 md:text-6xl">
-          You didn't open a clinic to babysit software.
+          You didn't open a practice to babysit software.
         </h2>
         <ul className="mt-12 grid gap-5 md:mt-16 md:grid-cols-2 md:gap-6">
           {painPoints.map((point, i) => (

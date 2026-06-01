@@ -12,8 +12,8 @@ const deliverables = [
     body: 'We walk through your full patient lifecycle. Lead capture. Lead response. Discovery call. Onboarding. Retention. Referrals. I ask the questions. You give the real answers.',
   },
   {
-    heading: 'Top 3 revenue gaps',
-    body: 'The three places your clinic loses the most money every month. With dollar impact estimates based on your numbers. Not generic benchmarks.',
+    heading: 'Top 3 system gaps',
+    body: 'The three places your practice operations break down most. Where the handoffs fail. Where the manual work compounds.',
   },
   {
     heading: 'Recommended system fixes',
@@ -28,7 +28,7 @@ const steps = [
   },
   {
     heading: '90-minute call',
-    body: 'We get on Zoom. I screen-share through every stage of your practice operations. We find the leaks together.',
+    body: 'We get on Zoom. I screen-share through every stage of your practice operations. We find the gaps together.',
   },
   {
     heading: 'Written report in 48 hours',
@@ -40,7 +40,7 @@ const faqs: FAQItem[] = [
   {
     question: 'What if the assessment finds I do not need a full build?',
     answer:
-      'That is a real possibility. Some clinics need one or two automations, not a full Practice OS. The report will tell you the truth either way.',
+      'That is a real possibility. Some practices need one or two automations, not a full Practice OS. The report will tell you the truth either way.',
   },
   {
     question: 'Do I have to hire you after the assessment?',
@@ -57,9 +57,9 @@ const faqs: FAQItem[] = [
     answer: 'Yes. You get the recording and the written report.',
   },
   {
-    question: 'Do you only work with functional medicine clinics?',
+    question: 'Do you only work with functional medicine practices?',
     answer:
-      'Functional medicine is the primary focus. The framework also fits integrative medicine and other health practices doing $30K plus per month with admin staff and an EHR. If your clinic fits that profile, the assessment will deliver value.',
+      'Functional medicine is the primary focus. The framework also fits integrative medicine and other health practices doing $30K plus per month with admin staff and an EHR. If your practice fits that profile, the assessment will deliver value.',
   },
   {
     question: 'How fast can we start?',
@@ -77,12 +77,12 @@ export function Assessment() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h1 className="mt-6 max-w-5xl text-5xl leading-[1.02] md:mt-8 md:text-7xl lg:text-[6.5rem]">
-              Find the leaks costing your clinic money. In 48 hours.
+              See exactly where your system breaks. In 48 hours.
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="mt-6 max-w-2xl text-lg md:mt-8 md:text-2xl">
-              A 90-minute working session and a written report. Top 3 gaps. Recommended fixes. Real numbers.
+              A 90-minute working session and a written report. Top 3 gaps. Recommended fixes. Real systems.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={280}>
@@ -100,12 +100,12 @@ export function Assessment() {
         </div>
       </section>
 
-      <Section eyebrow="01 / Who this is for" title="Built for clinics that already have leads.">
+      <Section eyebrow="01 / Who this is for" title="Built for practices that already have leads.">
         <Paragraphs
           text={[
-            'This assessment is for functional medicine clinics doing $30K or more in monthly revenue.',
+            'This assessment is for functional medicine practices doing $30K or more in monthly revenue.',
             'You have leads coming in. You have admin staff. You have an EHR. You probably have a CRM or a calendar tool. The pieces are there.',
-            'The problem is they do not talk to each other. Leads slip through. Consults no-show. Patients churn. You feel it every month but you cannot point to where the money is going.',
+            'The problem is they do not talk to each other. Handoffs break. Manual work compounds. Your team spends hours on tasks that should run on autopilot.',
             'That is what this assessment finds.',
           ]}
         />
@@ -177,7 +177,7 @@ export function Assessment() {
         <Paragraphs
           text={[
             '$450 is the cost of a serious diagnostic from someone who has built this stack from scratch. It is not free, because free assessments are sales calls in disguise.',
-            'The price filters for clinic owners who are ready to do the work.',
+            'The price filters for practice owners who are ready to do the work.',
             'If you decide to hire me to build the systems we identify, the full $450 is credited toward your build. The assessment becomes free.',
           ]}
         />
@@ -231,7 +231,7 @@ export function Assessment() {
           </ScrollReveal>
           <ScrollReveal delay={80}>
             <h2 className="mx-auto mt-6 max-w-4xl font-display text-4xl text-white md:text-6xl lg:text-7xl">
-              Find the leaks. Fix them. Get back to running your practice.
+              Map the gaps. Build the system. Get back to running your practice.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={160}>

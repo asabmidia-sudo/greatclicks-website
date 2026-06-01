@@ -153,10 +153,10 @@ export function QuizResults() {
         <div className="container-content">
           <p className="eyebrow">02 / Your top three gaps</p>
           <h2 className="mt-4 max-w-3xl text-4xl md:mt-6 md:text-6xl">
-            Your biggest leaks. Fix these first.
+            Your biggest system gaps. Fix these first.
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-body md:text-xl">
-            These three stages drain the most revenue every month.
+            These three stages break the most workflows in your practice.
           </p>
           <div className="mt-12 md:mt-16">
             <TopGapsDetail gaps={topGapCards} />

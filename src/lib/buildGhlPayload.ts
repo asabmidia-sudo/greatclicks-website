@@ -105,7 +105,7 @@ function buildRecommendation(result: QuizResult): string {
     `Your Practice Growth Score is ${result.practiceGrowthScore}/100, which puts you in the "${result.band}" band.`,
     `Your top three gaps: ${g1.label}, ${g2.label}, ${g3.label}.`,
     'The next step is the Growth Gap Assessment.',
-    'It maps every gap, costs the monthly revenue impact, and ranks the fix order.',
+    'It maps every system gap, ranks the impact, and orders the fix sequence.',
     'Book at greatclicks.io/assessment.',
   ].join(' ');
 }

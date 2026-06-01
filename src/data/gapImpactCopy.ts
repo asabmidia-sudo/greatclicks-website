@@ -2,15 +2,15 @@ import type { StageId } from './quizQuestions';
 
 export const gapImpactCopy: Record<StageId, string> = {
   lead_gen:
-    'Most clinics with no system here leak $5-15K/month in unrealized patient acquisition.',
+    'Most practices with no system here lose leads before they ever enter the pipeline.',
   lead_response:
-    'A 5-minute response window converts 21x better than 30 minutes. Costs $4-12K/month.',
+    'Without an instant response system, most leads go cold within 5 minutes.',
   consult_conversion:
-    'Industry average is 40-60%. Top performers hit 76%+. Gap costs $8-20K/month.',
+    'Industry average for consult-to-patient is 40 to 60 percent. Top systems hit 76 percent.',
   onboarding:
-    'Manual onboarding loses 15-25% of paid patients in the first 30 days.',
+    'Manual onboarding takes 4 to 6 hours per patient. A working system takes 30 minutes.',
   retention:
-    'Patient drop-off after month 3 costs FM clinics $10-30K/month in LTV.',
+    'Lab delivery without a system runs 5 to 10 days. With one, it runs same-day.',
   referral:
-    'Affiliate programs can be the single largest channel. Most clinics ignore this.',
+    'Without a system, referrals depend on the patient remembering. With one, they happen on autopilot.',
 };

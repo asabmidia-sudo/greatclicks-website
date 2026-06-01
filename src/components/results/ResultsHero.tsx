@@ -13,10 +13,10 @@ const bandLabels: Record<Band, string> = {
 };
 
 const bandDescriptions: Record<Band, string> = {
-  critical: 'Multiple core systems are missing. Each one is leaking revenue every month.',
-  significant: 'Foundation is partly there. Real gaps are leaking revenue right now.',
-  solid: 'Most systems work. Top performers push 20% past where you are.',
-  mature: 'Strong operation across the board. Refinement is what scales from here.',
+  critical: 'Foundation is missing. Multiple systems need to be built before anything else works.',
+  significant: 'Foundation is partly there. Real gaps are breaking handoffs across your practice.',
+  solid: 'Foundation is in place. A few system gaps still cost your team time every week.',
+  mature: 'Foundation is strong. Tighten the last few gaps to fully automate.',
 };
 
 export function ResultsHero({ score, band }: ResultsHeroProps) {
