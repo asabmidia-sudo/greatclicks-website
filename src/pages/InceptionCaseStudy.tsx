@@ -47,6 +47,18 @@ export function InceptionCaseStudy() {
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal delay={160}>
+            <figure className="mt-16 overflow-hidden rounded-2xl bg-dark shadow-sm md:mt-24">
+              <video
+                src="/Inception_testimonial.mp4"
+                controls
+                preload="metadata"
+                playsInline
+                className="block aspect-video h-full w-full"
+              />
+            </figure>
+          </ScrollReveal>
         </div>
       </section>
 
