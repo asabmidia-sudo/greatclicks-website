@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { Button } from '../components/ui/Button';
 import { FAQAccordion, type FAQItem } from '../components/ui/FAQAccordion';
+import { trackInitiateCheckout } from '../lib/metaPixel';
 
 const WHOP_CHECKOUT = 'https://whop.com/checkout/plan_8XSsdqUjoGELX';
 
@@ -92,7 +93,7 @@ export function Assessment() {
           </ScrollReveal>
           <ScrollReveal delay={360}>
             <div className="mt-10 md:mt-12">
-              <Button href={WHOP_CHECKOUT} variant="primary">
+              <Button href={WHOP_CHECKOUT} variant="primary" onClick={trackInitiateCheckout}>
                 Book the assessment
               </Button>
             </div>
@@ -241,7 +242,7 @@ export function Assessment() {
           </ScrollReveal>
           <ScrollReveal delay={240}>
             <div className="mt-10 flex justify-center">
-              <Button href={WHOP_CHECKOUT} variant="primary">
+              <Button href={WHOP_CHECKOUT} variant="primary" onClick={trackInitiateCheckout}>
                 Book the assessment
               </Button>
             </div>

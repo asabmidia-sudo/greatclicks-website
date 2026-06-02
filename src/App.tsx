@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Nav } from './components/layout/Nav';
 import { Footer } from './components/layout/Footer';
 import { ScrollToTop } from './components/layout/ScrollToTop';
+import { RouteChangeTracker } from './components/layout/RouteChangeTracker';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { CaseStudies } from './pages/CaseStudies';
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <ScrollToTop />
+      <RouteChangeTracker />
       <Nav />
       <main className="flex-1">
         <Routes>

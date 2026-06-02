@@ -13,6 +13,7 @@ import {
 } from '../lib/quizScoring';
 import { gapImpactCopy } from '../data/gapImpactCopy';
 import { stageLabels, type StageId } from '../data/quizQuestions';
+import { trackLead } from '../lib/metaPixel';
 
 const ANSWERS_KEY = 'pgq_answers';
 
@@ -79,6 +80,7 @@ export function QuizResults() {
   useEffect(() => {
     if (isValidResultsState(location.state)) {
       setResults(location.state);
+      trackLead();
       return;
     }
 
@@ -97,6 +99,7 @@ export function QuizResults() {
         topGaps: result.topGaps,
         disqualified: isDisqualified(answers),
       });
+      trackLead();
     } catch {
       navigate('/quiz', { replace: true });
     }
