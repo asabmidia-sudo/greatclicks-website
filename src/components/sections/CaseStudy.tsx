@@ -9,7 +9,7 @@ type Stat = {
 
 const stats: Stat[] = [
   { value: '538', label: 'Leads captured' },
-  { value: '76%', label: 'Consult to client conversion', caption: 'Industry average is 40 to 60%.' },
+  { value: '76%', label: 'Consultations converted to patients' },
   { value: '54', label: 'New paying patients' },
   { value: '15+', label: 'Staff hours saved per week' },
 ];

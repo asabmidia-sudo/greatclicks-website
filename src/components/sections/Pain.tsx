@@ -2,10 +2,11 @@ import { ScrollReveal } from '../ui/ScrollReveal';
 
 const painPoints = [
   'Front desk drowning in reminders.',
-  'Leads go cold before follow-up.',
-  'Consult no-shows hit 30%.',
-  'Patients drop off month three. Nobody notices.',
-  "EHR and marketing tools don't talk.",
+  'Leads going cold before they book.',
+  'Consultations no-showing or disappearing afterward.',
+  'Patients dropping off with no clear next step.',
+  "Your EHR and marketing systems don't talk.",
+  'Staff manually chasing tasks that should happen automatically.',
 ];
 
 export function Pain() {

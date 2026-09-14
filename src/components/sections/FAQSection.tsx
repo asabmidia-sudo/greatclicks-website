@@ -2,20 +2,20 @@ import { FAQAccordion } from '../ui/FAQAccordion';
 
 const faqs = [
   {
-    question: 'What does the quiz show?',
-    answer: 'Your Practice Growth Score and ranked gaps. Two minutes.',
+    question: 'What does the scorecard show?',
+    answer: 'Your Practice Growth Score and the stages that need the most attention. It takes about two minutes and requires no payment.',
   },
   {
-    question: "What's in the Growth Gap Assessment?",
-    answer: '90-minute session with your key staff. Report in 48 hours. Every gap costed and ranked.',
+    question: 'What happens in a Systems Review?',
+    answer: 'We review your follow-up, CRM, patient journey, and existing systems to identify the highest-impact gaps and discuss the next steps.',
   },
   {
-    question: 'Is this HIPAA-compliant?',
-    answer: 'Yes. BAA-covered infrastructure across the stack.',
+    question: 'Do we need to change our software?',
+    answer: 'We work with your existing CRM, EHR, marketing tools, and automation stack. The starting point is the patient journey and what needs to work better.',
   },
   {
     question: 'How much does it cost?',
-    answer: 'Assessment is $450. Build pricing scopes from the report.',
+    answer: 'Implementation scoped based on the systems and stages that need to be fixed. We start with a conversation about your practice.',
   },
 ];
 

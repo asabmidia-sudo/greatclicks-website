@@ -18,7 +18,7 @@ export function CaseStudies() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="mt-6 max-w-2xl text-lg md:mt-8 md:text-xl">
-              How we build the Practice OS for functional medicine practices.
+              How we connect the patient journey for functional medicine practices.
             </p>
           </ScrollReveal>
         </div>
@@ -69,8 +69,8 @@ export function CaseStudies() {
       <BottomCTABanner
         heading="Stop stitching your practice together."
         subhead="Two minutes. See where the system breaks."
-        primaryCta={{ label: 'Get your Practice Growth Score', to: '/quiz' }}
-        secondaryCta={{ label: 'Or book the assessment', to: '/assessment' }}
+        primaryCta={{ label: 'Get Your Practice Growth Score', to: '/quiz' }}
+        secondaryCta={{ label: 'Book a Systems Review', to: '/systems-review' }}
       />
     </>
   );

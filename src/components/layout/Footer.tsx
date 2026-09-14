@@ -18,7 +18,7 @@ export function Footer() {
               <span className="font-display text-xl font-normal text-white">Greatclicks</span>
             </Link>
             <p className="mt-4 max-w-sm text-base text-white/70">
-              Practice Growth System for functional medicine practices.
+              Greatclicks builds the growth systems behind functional medicine practices — from first inquiry through enrollment, onboarding, retention, and reactivation.
             </p>
             <div className="mt-6 flex gap-3">
               <SocialLink href="https://www.linkedin.com/company/greatclicks" label="LinkedIn">

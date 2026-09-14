@@ -29,7 +29,7 @@ export function Button({
   showArrow = true,
   className = '',
 }: ButtonProps) {
-  const classes = `group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50 ${variants[variant]} ${className}`;
+  const classes = `group inline-flex max-w-full min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-medium transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50 ${variants[variant]} ${className}`;
 
   const content = (
     <>
@@ -41,7 +41,7 @@ export function Button({
           viewBox="0 0 16 16"
           fill="none"
           aria-hidden="true"
-          className="transition-transform duration-200 group-hover:translate-x-1"
+          className="shrink-0 transition-transform duration-200 group-hover:translate-x-1"
         >
           <path
             d="M3 8h10m0 0L8 3m5 5l-5 5"

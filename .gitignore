@@ -35,3 +35,9 @@ pnpm-debug.log*
 
 # Vercel
 .vercel
+
+# Local visual verification artifacts
+.verification/
+*-review.png
+
+.vercel

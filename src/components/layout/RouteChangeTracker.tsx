@@ -4,13 +4,11 @@ import { trackPageView } from '../../lib/metaPixel';
 
 export function RouteChangeTracker() {
   const { pathname } = useLocation();
-  const isFirstRun = useRef(true);
+  const previousPath = useRef(pathname);
 
   useEffect(() => {
-    if (isFirstRun.current) {
-      isFirstRun.current = false;
-      return;
-    }
+    if (previousPath.current === pathname) return;
+    previousPath.current = pathname;
     trackPageView();
   }, [pathname]);
 

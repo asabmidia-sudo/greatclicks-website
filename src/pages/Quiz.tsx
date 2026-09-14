@@ -7,6 +7,7 @@ import { Button } from '../components/ui/Button';
 import { quizQuestions } from '../data/quizQuestions';
 import { computeQuizResult, isDisqualified } from '../lib/quizScoring';
 import { buildGhlPayload, type ContactInfo } from '../lib/buildGhlPayload';
+import { trackLead } from '../lib/metaPixel';
 
 const SESSION_KEY = 'pgq_session';
 const ANSWERS_KEY = 'pgq_answers';
@@ -141,8 +142,6 @@ export function Quiz() {
       sessionId,
     };
 
-    console.log('[quiz] submitting payload', payload);
-
     try {
       const res = await fetch(SUBMIT_ENDPOINT, {
         method: 'POST',
@@ -150,6 +149,11 @@ export function Quiz() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const leadKey = `pgq_lead_${sessionId}`;
+      if (!sessionStorage.getItem(leadKey)) {
+        trackLead();
+        sessionStorage.setItem(leadKey, '1');
+      }
 
       navigate('/quiz/results', {
         state: {
@@ -200,7 +204,7 @@ export function Quiz() {
 function Landing({ onStart }: { onStart: () => void }) {
   return (
     <div>
-      <p className="eyebrow">Practice Growth Quiz</p>
+      <p className="eyebrow">Practice Growth Scorecard</p>
       <h1 className="mt-6 font-display text-5xl leading-[1.05] text-dark md:mt-8 md:text-7xl">
         Find your gaps in two minutes.
       </h1>
@@ -209,7 +213,7 @@ function Landing({ onStart }: { onStart: () => void }) {
       </p>
       <div className="mt-10">
         <Button onClick={onStart} variant="primary">
-          Start the Quiz
+          Start the Scorecard
         </Button>
       </div>
     </div>

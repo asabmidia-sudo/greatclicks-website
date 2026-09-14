@@ -9,11 +9,11 @@ export function SkipQuiz() {
           Already know you have gaps?
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg md:text-xl">
-          Skip the quiz. Book the assessment.
+          Let's look at what's happening between lead capture, booking, enrollment, onboarding, and retention.
         </p>
         <div className="mt-10 flex justify-center">
-          <Button to="/assessment" variant="primary">
-            Book the Assessment · $450
+          <Button to="/systems-review" variant="primary">
+            Book a Systems Review
           </Button>
         </div>
       </div>
