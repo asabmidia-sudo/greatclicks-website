@@ -1,8 +1,3 @@
-// Set this public URL when the GHL calendar is ready. No checkout is used.
-const configuredUrl = import.meta.env.VITE_SYSTEMS_REVIEW_BOOKING_URL?.trim();
-
-export const bookingUrl = configuredUrl && /^https:\/\//i.test(configuredUrl)
-  ? configuredUrl
-  : null;
-
-export const reviewContactUrl = 'mailto:hello@greatclicks.io?subject=Practice%20Systems%20Review';
+// Owner-provided GHL assessment calendar. Public embed URL, not a secret.
+export const bookingUrl = 'https://api.leadconnectorhq.com/widget/booking/1SFnzSaTGq6hNEme2SGZ';
+export const bookingFrameId = '1SFnzSaTGq6hNEme2SGZ_1789399256798';

@@ -6,9 +6,9 @@ Vercel project: `greatclicks-website` (`prj_pFGv63OwpVMt5NNoqxB0DIU7lf1p`).
 
 ## Booking setup
 
-Set `VITE_SYSTEMS_REVIEW_BOOKING_URL` to the direct HTTPS GHL calendar URL in Vercel Preview and Production, then rebuild. This is a public, build-time Vite setting. Until it is set, `/systems-review` offers email contact at the existing `hello@greatclicks.io` address. No paid checkout is used. `/assessment` and `/contact` redirect to `/systems-review`.
+The owner-provided GHL Assessment Call calendar is embedded at `/assessment` using `https://api.leadconnectorhq.com/widget/booking/1SFnzSaTGq6hNEme2SGZ` and the official `form_embed.js` script. The public calendar URL and frame ID are in `src/lib/booking.ts`; no additional environment variable is needed. The embed initializer runs when the calendar mounts and its script tag is removed on unmount, allowing resizing to work after client-side navigation. A direct calendar link is available below the embed. `/systems-review` and `/contact` redirect to `/assessment`.
 
-`GHL_QUIZ_WEBHOOK_URL` remains server-side. Its name and the quiz payload fields/tags are preserved so existing automations can continue to consume submissions. The recommendation text now points to Systems Review. Existing GHL email sequences may still mention the paid assessment; review those separately before launch.
+`GHL_QUIZ_WEBHOOK_URL` remains server-side. Its name and the quiz payload fields/tags are preserved so existing automations can continue to consume submissions. The recommendation text now points to an Assessment Call. Existing GHL email sequences may still mention the old paid assessment; review those separately.
 
 ## Content sources
 
@@ -24,7 +24,8 @@ Set `VITE_SYSTEMS_REVIEW_BOOKING_URL` to the direct HTTPS GHL calendar URL in Ve
 - Scorecard verified through all eight questions, contact capture, failed submission/retry, qualified and disqualified results, reload/back navigation, and Lead event deduplication. Submission responses were mocked; no test contact was sent to GHL.
 - All six YouTube players load their named testimonials. Inception MP4 playback verified.
 - Internal CTA destinations, legacy redirects, mobile menu behavior, and page titles checked.
-- Direct calendar booking awaits the owner's GHL URL. Live webhook delivery and downstream email workflows have not been exercised.
+- Calendar loading, responsive sizing, and client-side navigation are checked without creating a real appointment. Live webhook delivery and downstream email workflows have not been exercised.
+- Selecting an available calendar time opens the qualification/contact form. Its longer mobile layout resizes correctly. The final GHL submit label is still `Schedule System Audit`; that is a calendar setting inside GHL, not website copy.
 
 ## Remaining backend review
 

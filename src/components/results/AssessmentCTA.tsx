@@ -10,8 +10,8 @@ export function AssessmentCTA() {
         We review your follow-up, patient journey, and existing systems to identify the highest-impact improvements first.
       </p>
       <div className="mt-8">
-        <Button to="/systems-review" variant="primary">
-          Book a Systems Review
+        <Button to="/assessment" variant="primary">
+          Book an Assessment Call
         </Button>
       </div>
     </div>

@@ -50,8 +50,8 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:block">
-          <Button to="/systems-review" variant="primary">
-            Book a Systems Review
+          <Button to="/assessment" variant="primary">
+            Book an Assessment Call
           </Button>
         </div>
 
@@ -90,8 +90,8 @@ export function Nav() {
             </NavLink>
           ))}
           <div className="mt-4">
-            <Button to="/systems-review" variant="primary" className="w-full">
-              Book a Systems Review
+            <Button to="/assessment" variant="primary" className="w-full">
+              Book an Assessment Call
             </Button>
           </div>
         </div>

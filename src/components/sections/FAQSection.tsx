@@ -6,7 +6,7 @@ const faqs = [
     answer: 'Your Practice Growth Score and the stages that need the most attention. It takes about two minutes and requires no payment.',
   },
   {
-    question: 'What happens in a Systems Review?',
+    question: 'What happens in an Assessment Call?',
     answer: 'We review your follow-up, CRM, patient journey, and existing systems to identify the highest-impact gaps and discuss the next steps.',
   },
   {

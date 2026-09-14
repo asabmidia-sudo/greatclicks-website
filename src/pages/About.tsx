@@ -66,7 +66,7 @@ export function About() {
         <Paragraphs
           text={[
             'The Practice Growth System maps every system gap in a practice. Lead capture. Lead response. Discovery call conversion. Enrollment and onboarding. Retention and lab follow-up. Referrals and reactivation.',
-            'The Practice Growth Scorecard highlights your gaps. A Systems Review diagnoses the next steps. Implementation closes the gaps.',
+            'The Practice Growth Scorecard highlights your gaps. An Assessment Call diagnoses the next steps. Implementation closes the gaps.',
             'I do not build and leave. I stay in the loop. I troubleshoot when something breaks. I keep the systems clean so your team can focus on patients.',
           ]}
         />
@@ -103,7 +103,7 @@ export function About() {
         heading="Stop stitching your practice together."
         subhead="Two minutes. See where the system breaks."
         primaryCta={{ label: 'Get Your Practice Growth Score', to: '/quiz' }}
-        secondaryCta={{ label: 'Book a Systems Review', to: '/systems-review' }}
+        secondaryCta={{ label: 'Book an Assessment Call', to: '/assessment' }}
       />
     </>
   );

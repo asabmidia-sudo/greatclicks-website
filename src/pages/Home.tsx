@@ -33,7 +33,7 @@ export function Home() {
         heading="Stop stitching your practice together."
         subhead="Find the gaps. Review your systems. Fix what matters first."
         primaryCta={{ label: 'Get Your Practice Growth Score', to: '/quiz' }}
-        secondaryCta={{ label: 'Book a Systems Review', to: '/systems-review' }}
+        secondaryCta={{ label: 'Book an Assessment Call', to: '/assessment' }}
       />
     </>
   );

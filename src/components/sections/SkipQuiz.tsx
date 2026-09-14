@@ -12,8 +12,8 @@ export function SkipQuiz() {
           Let's look at what's happening between lead capture, booking, enrollment, onboarding, and retention.
         </p>
         <div className="mt-10 flex justify-center">
-          <Button to="/systems-review" variant="primary">
-            Book a Systems Review
+          <Button to="/assessment" variant="primary">
+            Book an Assessment Call
           </Button>
         </div>
       </div>

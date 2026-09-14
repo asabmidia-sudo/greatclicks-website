@@ -70,7 +70,7 @@ export function CaseStudies() {
         heading="Stop stitching your practice together."
         subhead="Two minutes. See where the system breaks."
         primaryCta={{ label: 'Get Your Practice Growth Score', to: '/quiz' }}
-        secondaryCta={{ label: 'Book a Systems Review', to: '/systems-review' }}
+        secondaryCta={{ label: 'Book an Assessment Call', to: '/assessment' }}
       />
     </>
   );

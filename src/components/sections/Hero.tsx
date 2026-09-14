@@ -25,10 +25,10 @@ export function Hero() {
               Get Your Practice Growth Score
             </Button>
             <Link
-              to="/systems-review"
+              to="/assessment"
               className="group inline-flex min-h-[44px] items-center text-sm font-medium text-body transition-colors hover:text-primary"
             >
-              Book a Systems Review
+              Book an Assessment Call
               <span className="ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
             </Link>
           </div>

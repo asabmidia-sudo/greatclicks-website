@@ -52,7 +52,7 @@ export function KristiCaseStudy() {
           <p className="mt-8 max-w-3xl text-lg">Kristi’s membership workflow was a practice-specific extension. Ongoing care, future testing, retention, and renewals are scoped around how each clinic operates.</p>
         </div>
       </section>
-      <BottomCTABanner heading="Map your own Lab-to-Program journey." subhead="Review the handoffs between testing, results review, program recommendations, enrollment, and onboarding." primaryCta={{ label: 'Book a Systems Review', to: '/systems-review' }} secondaryCta={{ label: 'Get Your Practice Growth Score', to: '/quiz' }} />
+      <BottomCTABanner heading="Map your own Lab-to-Program journey." subhead="Review the handoffs between testing, results review, program recommendations, enrollment, and onboarding." primaryCta={{ label: 'Book an Assessment Call', to: '/assessment' }} secondaryCta={{ label: 'Get Your Practice Growth Score', to: '/quiz' }} />
     </>
   );
 }

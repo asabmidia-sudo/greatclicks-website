@@ -10,7 +10,7 @@ import { CaseStudies } from './pages/CaseStudies';
 import { InceptionCaseStudy } from './pages/InceptionCaseStudy';
 import { Quiz } from './pages/Quiz';
 import { QuizResults } from './pages/QuizResults';
-import { SystemsReview } from './pages/SystemsReview';
+import { Assessment } from './pages/Assessment';
 import { KristiCaseStudy } from './pages/KristiCaseStudy';
 import { NotFound } from './pages/NotFound';
 
@@ -31,9 +31,9 @@ export default function App() {
           <Route path="/case-study/kristi-leigh" element={<Navigate to="/case-studies/kristi-leigh" replace />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/quiz/results" element={<QuizResults />} />
-          <Route path="/systems-review" element={<SystemsReview />} />
-          <Route path="/assessment" element={<Navigate to="/systems-review" replace />} />
-          <Route path="/contact" element={<Navigate to="/systems-review" replace />} />
+          <Route path="/assessment" element={<Assessment />} />
+          <Route path="/systems-review" element={<Navigate to="/assessment" replace />} />
+          <Route path="/contact" element={<Navigate to="/assessment" replace />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

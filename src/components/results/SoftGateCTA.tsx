@@ -18,7 +18,7 @@ export function SoftGateCTA({ lowestStage }: SoftGateCTAProps) {
         Use the stage breakdown above to review where people lose their next step. When you’re ready, we can discuss the systems behind it.
       </p>
       <div className="mt-8">
-        <Button to="/systems-review" variant="secondary">
+        <Button to="/assessment" variant="secondary">
           Ask About Your Systems
         </Button>
       </div>
