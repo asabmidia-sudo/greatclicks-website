@@ -45,6 +45,10 @@ function validatePayload(body: unknown): ValidationResult {
     return { ok: false, detail: 'sessionId' };
   if (typeof b.email !== 'string' || !b.email.includes('@'))
     return { ok: false, detail: 'email' };
+  if (typeof b.phone !== 'string') return { ok: false, detail: 'phone' };
+  const phoneDigits = b.phone.replace(/\D/g, '');
+  if (phoneDigits.length < 7 || phoneDigits.length > 15)
+    return { ok: false, detail: 'phone' };
   if (
     typeof b.practiceGrowthScore !== 'number' ||
     b.practiceGrowthScore < 0 ||

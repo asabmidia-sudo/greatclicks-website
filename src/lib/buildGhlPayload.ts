@@ -10,6 +10,7 @@ import {
 export type ContactInfo = {
   firstName: string;
   email: string;
+  phone: string;
   companyName: string;
 };
 
@@ -23,6 +24,7 @@ export type QuizResponse = {
 export type GhlPayload = {
   firstName: string | null;
   email: string | null;
+  phone: string | null;
   companyName: string | null;
   tags: string[];
   practiceGrowthScore: number;
@@ -126,6 +128,7 @@ export function buildGhlPayload(
   return {
     firstName: nullIfEmpty(contact.firstName),
     email: nullIfEmpty(contact.email),
+    phone: nullIfEmpty(contact.phone),
     companyName: nullIfEmpty(contact.companyName),
     tags: buildTags(result),
     practiceGrowthScore: result.practiceGrowthScore,

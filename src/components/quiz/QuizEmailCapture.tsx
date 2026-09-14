@@ -4,6 +4,11 @@ import type { ContactInfo } from '../../lib/buildGhlPayload';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function isValidPhone(value: string): boolean {
+  const digits = value.replace(/\D/g, '');
+  return digits.length >= 7 && digits.length <= 15;
+}
+
 type QuizEmailCaptureProps = {
   contact: ContactInfo;
   onChange: (next: ContactInfo) => void;
@@ -24,6 +29,7 @@ export function QuizEmailCapture({
   const isValid =
     contact.firstName.trim() !== '' &&
     EMAIL_RE.test(contact.email.trim()) &&
+    isValidPhone(contact.phone) &&
     contact.companyName.trim() !== '';
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -56,6 +62,15 @@ export function QuizEmailCapture({
           value={contact.email}
           onChange={(v) => onChange({ ...contact, email: v })}
           autoComplete="email"
+        />
+        <Field
+          id="quiz-phone"
+          label="Phone number"
+          type="tel"
+          value={contact.phone}
+          onChange={(v) => onChange({ ...contact, phone: v })}
+          autoComplete="tel"
+          inputMode="tel"
         />
         <Field
           id="quiz-clinic"
@@ -101,9 +116,10 @@ type FieldProps = {
   value: string;
   onChange: (v: string) => void;
   autoComplete?: string;
+  inputMode?: 'email' | 'numeric' | 'search' | 'tel' | 'text' | 'url';
 };
 
-function Field({ id, label, type = 'text', value, onChange, autoComplete }: FieldProps) {
+function Field({ id, label, type = 'text', value, onChange, autoComplete, inputMode }: FieldProps) {
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-dark">
@@ -115,6 +131,8 @@ function Field({ id, label, type = 'text', value, onChange, autoComplete }: Fiel
         value={value}
         onChange={(e) => onChange(e.target.value)}
         autoComplete={autoComplete}
+        inputMode={inputMode}
+        required
         className="mt-2 block min-h-[44px] w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-dark transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
       />
     </div>

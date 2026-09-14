@@ -30,7 +30,12 @@ export function Quiz() {
   const navigate = useNavigate();
   const [step, setStepState] = useState<Step>('landing');
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [contact, setContact] = useState<ContactInfo>({ firstName: '', email: '', companyName: '' });
+  const [contact, setContact] = useState<ContactInfo>({
+    firstName: '',
+    email: '',
+    phone: '',
+    companyName: '',
+  });
   const [sessionId, setSessionId] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
