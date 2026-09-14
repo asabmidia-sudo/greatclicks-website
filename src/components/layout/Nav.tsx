@@ -51,7 +51,7 @@ export function Nav() {
 
         <div className="hidden md:block">
           <Button to="/assessment" variant="primary">
-            Book Assessment
+            Book an Assessment Call
           </Button>
         </div>
 
@@ -73,7 +73,7 @@ export function Nav() {
         </button>
       </div>
 
-      <div
+      <div hidden={!menuOpen}
         className={`overflow-hidden transition-[max-height] duration-300 md:hidden ${menuOpen ? 'max-h-96' : 'max-h-0'}`}
       >
         <div className="container-content flex flex-col gap-1 pb-6">
@@ -91,7 +91,7 @@ export function Nav() {
           ))}
           <div className="mt-4">
             <Button to="/assessment" variant="primary" className="w-full">
-              Book Assessment
+              Book an Assessment Call
             </Button>
           </div>
         </div>

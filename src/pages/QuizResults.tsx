@@ -12,8 +12,7 @@ import {
   type StageScore,
 } from '../lib/quizScoring';
 import { gapImpactCopy } from '../data/gapImpactCopy';
-import { stageLabels, type StageId } from '../data/quizQuestions';
-import { trackLead } from '../lib/metaPixel';
+import { stageLabels } from '../data/quizQuestions';
 
 const ANSWERS_KEY = 'pgq_answers';
 
@@ -27,15 +26,6 @@ const REQUIRED_ANSWER_KEYS = [
   'retention',
   'referral',
 ] as const;
-
-const softGateResources: Record<StageId, string> = {
-  lead_gen: 'The Lead Capture Playbook',
-  lead_response: 'The Lead Response Playbook',
-  consult_conversion: 'The Discovery Call Playbook',
-  onboarding: 'The Onboarding Playbook',
-  retention: 'The Retention Playbook',
-  referral: 'The Referral Playbook',
-};
 
 type ResultsState = {
   score: number;
@@ -80,7 +70,6 @@ export function QuizResults() {
   useEffect(() => {
     if (isValidResultsState(location.state)) {
       setResults(location.state);
-      trackLead();
       return;
     }
 
@@ -99,7 +88,6 @@ export function QuizResults() {
         topGaps: result.topGaps,
         disqualified: isDisqualified(answers),
       });
-      trackLead();
     } catch {
       navigate('/quiz', { replace: true });
     }
@@ -170,11 +158,8 @@ export function QuizResults() {
       <section className="section-y">
         <div className="container-content">
           {results.disqualified ? (
-            // TODO Phase 6+: replace resourceHref with real lead-magnet URL keyed by lowest stage
             <SoftGateCTA
               lowestStage={stageLabels[lowestGap.stage]}
-              resourceTitle={softGateResources[lowestGap.stage]}
-              resourceHref="#"
             />
           ) : (
             <AssessmentCTA />

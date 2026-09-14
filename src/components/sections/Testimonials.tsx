@@ -1,4 +1,5 @@
 import { ScrollReveal } from '../ui/ScrollReveal';
+import { Link } from 'react-router-dom';
 
 type Video = { id: string; name: string };
 
@@ -34,7 +35,7 @@ export function Testimonials() {
                   />
                 </div>
                 <figcaption className="border-t border-white/10 px-5 py-3 text-sm font-medium text-white">
-                  {video.name}
+                  {video.id === '8iKJvXJ7EUE' ? <Link to="/case-studies/kristi-leigh" className="flex min-h-[44px] items-center justify-between gap-3 hover:underline">Kristi <span>Read case study →</span></Link> : video.name}
                 </figcaption>
               </figure>
             </ScrollReveal>

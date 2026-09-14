@@ -1,6 +1,8 @@
 import { Hero } from '../components/sections/Hero';
 import { Marquee } from '../components/ui/Marquee';
 import { Pain } from '../components/sections/Pain';
+import { EarlyProof } from '../components/sections/EarlyProof';
+import { LabToProgram } from '../components/sections/LabToProgram';
 import { Framework } from '../components/sections/Framework';
 import { HowItWorks } from '../components/sections/HowItWorks';
 import { CaseStudy } from '../components/sections/CaseStudy';
@@ -18,7 +20,9 @@ export function Home() {
       <Hero />
       <Marquee items={marqueeItems} />
       <Pain />
+      <EarlyProof />
       <Framework />
+      <LabToProgram />
       <HowItWorks />
       <CaseStudy />
       <Testimonials />
@@ -27,9 +31,9 @@ export function Home() {
       <FAQSection />
       <BottomCTABanner
         heading="Stop stitching your practice together."
-        subhead="Two minutes. See where the system breaks."
-        primaryCta={{ label: 'Get your Practice Growth Score', to: '/quiz' }}
-        secondaryCta={{ label: 'Or book the assessment', to: '/assessment' }}
+        subhead="Find the gaps. Review your systems. Fix what matters first."
+        primaryCta={{ label: 'Get Your Practice Growth Score', to: '/quiz' }}
+        secondaryCta={{ label: 'Book an Assessment Call', to: '/assessment' }}
       />
     </>
   );

@@ -3,18 +3,18 @@ import { NumberedSection } from '../ui/NumberedSection';
 const steps = [
   {
     number: '01',
-    title: 'Quiz',
-    description: 'Two minutes. Score and ranked gaps.',
+    title: 'Score',
+    description: 'See where your practice is leaking opportunities.',
   },
   {
     number: '02',
-    title: 'Assess',
-    description: '90 minutes. Report in 48 hours.',
+    title: 'Diagnose',
+    description: 'We review your follow-up, CRM, patient journey, and existing systems.',
   },
   {
     number: '03',
-    title: 'Build',
-    description: 'We install what the report recommends.',
+    title: 'Fix',
+    description: 'We implement the highest-impact improvements first.',
   },
 ];
 

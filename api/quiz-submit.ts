@@ -121,7 +121,7 @@ export default async function handler(request: Request): Promise<Response> {
   }
 
   const validation = validatePayload(body);
-  if (!validation.ok) {
+  if (validation.ok === false) {
     return jsonResponse(
       { error: 'invalid_payload', detail: validation.detail },
       400,
